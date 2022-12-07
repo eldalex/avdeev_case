@@ -9,18 +9,25 @@ from django.core.exceptions import ValidationError
 class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answers
-        fields = ('question_id', 'aswer_text', 'true_answer',)
+        fields = ('question_id', 'answer_1_text', 'true_answer_1', 'answer_2_text', 'true_answer_2', 'answer_3_text',
+                  'true_answer_3', 'answer_4_text', 'true_answer_4', 'answer_5_text', 'true_answer_5','answer_6_text',
+                  'true_answer_6',)
         readonly_fields = ('question_id',)
 
     def clean(self):
         cleaned_data = super().clean()
-        true_answer = cleaned_data.get("true_answer")
-        if true_answer:
-            # Проверяем, что у других ответов не установлен чекбокс "Верный ответ"
-            answers = Answers.objects.filter(question_id=cleaned_data.get("question_id"))
-            for answer in answers:
-                if answer.true_answer:
-                    raise ValidationError("Нельзя установить более одного верного ответа")
+        count_answers = 0
+        count_true = 0
+        for i in range(1, 7):
+            if cleaned_data[f"answer_{i}_text"] is not None:
+                count_answers += 1
+                if cleaned_data[f"true_answer_{i}"]:
+                    count_true += 1
+        if count_answers == count_true:
+            raise ValidationError("Все ответы не могут быть верными")
+        elif count_answers > 0 and count_true == 0:
+            raise ValidationError("Вы не отметили ни один верный вариант")
+
         return cleaned_data
 
 
@@ -28,7 +35,9 @@ class AnswerForm(forms.ModelForm):
 class AnswerAdm(admin.StackedInline):
     form = AnswerForm
     model = Answers
-    fields = ('question_id', 'aswer_text', 'true_answer',)
+    fields = ('question_id', 'answer_1_text', 'true_answer_1', 'answer_2_text', 'true_answer_2', 'answer_3_text',
+              'true_answer_3', 'answer_4_text', 'true_answer_4', 'answer_5_text', 'true_answer_5','answer_6_text',
+              'true_answer_6',)
     readonly_fields = ('question_id',)
 
 
@@ -40,40 +49,10 @@ class TestsAdmin(admin.ModelAdmin):
         print('TestsAdmin')
         super(TestsAdmin, self).save(*args, **kwargs)
 
-
-class UserModelForm(forms.ModelForm):
-
-    def question_text(self):
-        data = self.cleaned_data['question_text']
-        if data is None:
-            raise ValidationError('ERROR question_text')
-        return data
-
-
 class TestquestionAdmin(admin.ModelAdmin):
     list_display = ('question_id', 'test_id', 'question_text',)
-    list_display_links = ('question_id',)
+    list_display_links = ('question_id','question_text',)
     inlines = [AnswerAdm, ]
-
-    # def test_valid(self,request):
-    #     for item in request.POST:
-    #         if "aswer_text" in item and request.POST[item] != '':
-    #             if request.POST[item] == '111':
-    #                 return False
-    #
-    # def save_formset(self, request, form, formset, change):
-    #     print('ssas')
-    #     if self.test_valid(request):
-    #         if self.test_valid(request):
-    #             formset.save()
-    #             if not change:
-    #                 for f in formset.forms:
-    #                     obj = f.instance
-    #                     obj.user = request.user
-    #                     obj.save()
-    #     else:
-    #         raise ValidationError('ERROR salary number!')
-
 
 admin.site.register(Tests, TestsAdmin)
 admin.site.register(Testquestion, TestquestionAdmin)

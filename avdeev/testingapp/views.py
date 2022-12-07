@@ -1,9 +1,9 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from django.db.models import Max
 import json
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.shortcuts import redirect
-from .models import Tests, Testquestion
+from .models import Tests, Testquestion, Answers, TestResults
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
@@ -55,10 +55,20 @@ def first_page(request):
         response = redirect('http://127.0.0.1:8000/account/login/')
         return response
     else:
-        tests = Tests.objects.all()
-        obj = {'tests': tests}
-        print("stop")
+        user_pass_test = TestResults.objects.values('test_id','test_is_pass').filter(user_id=request.user.id)
+        user_pass_test_list=[]
+        user_not_pass_test_list=[]
+        for item in user_pass_test:
+            if item['test_is_pass']:
+                user_pass_test_list.append(item['test_id'])
+            else:
+                user_not_pass_test_list.append(item['test_id'])
 
+
+        pass_tests = Tests.objects.filter(test_id__in=user_pass_test_list)
+        not_pass_test = Tests.objects.filter(test_id__in=user_not_pass_test_list)
+        obj = {'pass_tests': pass_tests.values(),
+               'not_pass_tests':not_pass_test}
         return render(request, './index.html', obj)
 
 
@@ -73,28 +83,68 @@ def testing_page(request, test_id=0):
             "testID": test_id,
             "number": 1,
             "question": test_question.question_text,
-            "answers": json.loads(test_question.question_answers)
         }
         return render(request, './testing.html', obj)
 
 
-def get_next_question(test_id, question_number):
+def get_next_question(test_id, question_number,user_id):
     max_question = Testquestion.objects.filter(test_id=test_id).aggregate(Max('question_id'))
     if question_number <= max_question["question_id__max"]:
         next_question = Testquestion.objects.get(test_id=test_id, question_id=question_number)
+        answers_for_question = list(Answers.objects.filter(id=next_question.id).values())[0]
+        num = 1
+        ans = {}
+        ans_id = {}
+        for i in answers_for_question:
+            if "_text" in i and answers_for_question[i] is not None:
+                ans.update({num: answers_for_question[i]})
+                num += 1
         obj = {
             "testID": test_id,
             "number": next_question.question_id,
             "question": next_question.question_text,
-            "answers": json.loads(next_question.question_answers)
+            "realQuestionId": answers_for_question["id"],
+            "answers": ans
         }
     else:
+        set_test_is_pass(test_id,user_id)
         obj = {"finish": "true"}
     return obj
 
 
 def success_page(request):
     return render(request, './successpage.html')
+
+def set_test_is_pass(test_id,user_id):
+    if TestResults.objects.filter(test_id=test_id, user_id=user_id).exists():
+        result = TestResults.objects.get(test_id=test_id, user_id=user_id)
+        result.test_is_pass=True
+        result.save()
+
+def check_and_record_answer(answers, test_id, question_number, user, user_id, realQuestionId):
+    answers_for_question = list(Answers.objects.filter(id=realQuestionId).values())[0]
+    true_answers = []
+    for i in answers_for_question:
+        if "_text" in i and answers_for_question[i] is not None:
+            if answers_for_question[f"true_answer_{i[7]}"]:
+                true_answers.append(str(i[7]))
+    test = Tests.objects.get(pk=test_id)
+    if TestResults.objects.filter(test_id=test_id, user_id=user_id).exists():
+        result = TestResults.objects.get(test_id=test_id, user_id=user_id)
+    else:
+        result = TestResults(test_id=test, user_id=user_id, test_is_pass=False, true_answer=0, wrong_answer=0)
+        result.save()
+    if question_number == 1:
+        result.true_answer = 0
+        result.wrong_answer = 0
+        result.save()
+
+    if answers == true_answers:
+        result.true_answer += 1
+        result.save()
+    else:
+        result.wrong_answer += 1
+        result.save()
 
 
 def get_question_response(request):
@@ -112,12 +162,16 @@ def get_question_response(request):
         answers = request_body['answers']
     else:
         answers = None
+    if "realQuestionId" in request_body:
+        realQuestionId = request_body['realQuestionId']
+    else:
+        realQuestionId = None
 
     if answers and test_id and question_number:
-        response_data = get_next_question(test_id, question_number + 1)
+        check_and_record_answer(answers, test_id, question_number, request.user, request.user.id, realQuestionId)
+        response_data = get_next_question(test_id, question_number + 1, request.user.id)
     elif test_id and question_number:
-        response_data = get_next_question(test_id, question_number)
+        response_data = get_next_question(test_id, question_number, request.user.id)
     else:
         pass
-
     return HttpResponse(json.dumps(response_data), content_type="application/json")

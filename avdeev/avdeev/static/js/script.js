@@ -22,7 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function getQuestion(next = {"question_number": "1"}) {
         next["test_id"] = test_id.textContent;
-        console.log(next);
         const request = new XMLHttpRequest();
         request.open('POST', 'http://127.0.0.1:8000/getquestion/');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
@@ -33,6 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
         request.addEventListener('load', () => {
             if (request.status === 200) {
                 question = JSON.parse(request.response);
+                console.log(question)
                 if ("finish" in question) {
                     clearOldQuestion()
                     form.addEventListener('submit', (e) => {
@@ -50,6 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function newQuestion(question) {
         clearOldQuestion()
+        quest_number.setAttribute("realQuestionId", question.realQuestionId)
         quest_number.innerHTML = question.number
         quest_text.innerHTML = " " + question.question
         for (let i in question.answers) {
@@ -84,7 +85,8 @@ window.addEventListener('DOMContentLoaded', () => {
         })
         obj_ans = {
             "answers": list_ans,
-            "question_number": quest_number.innerHTML
+            "question_number": quest_number.innerHTML,
+            "realQuestionId": quest_number.getAttribute("realQuestionId")
         }
         getQuestion(obj_ans)
     })
