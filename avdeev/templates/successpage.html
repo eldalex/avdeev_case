@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Вы успешно зарегистрировались!
+<script>
+    const redirectTimeout = setTimeout(redirectPage, 2000);
+
+    function redirectPage() {
+        clearTimeout(redirectTimeout);
+        window.location.href = "http://127.0.0.1:8000/"
+    };
+</script>
+</body>
+</html>
