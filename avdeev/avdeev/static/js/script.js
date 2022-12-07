@@ -6,7 +6,8 @@ window.addEventListener('DOMContentLoaded', () => {
         quest_number = form.querySelector('.number'),
         quest_text = form.querySelector('.question__text'),
         test_id = form.querySelector('.test_id'),
-        logoutButton = document.querySelector('.logout');
+        logoutButton = document.querySelector('.logout'),
+        submitButton = document.querySelector('.submit-answer');
 
     clearOldQuestion()
 
@@ -21,7 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function getQuestion(next = {"question_number": "1"}) {
-        next["test_id"] = test_id.textContent;
+
+        next["test_id"] = test_id.getAttribute("testID");
+        console.log(next)
         const request = new XMLHttpRequest();
         request.open('POST', 'http://127.0.0.1:8000/getquestion/');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
@@ -35,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 console.log(question)
                 if ("finish" in question) {
                     clearOldQuestion()
+                    submitButton.innerHTML='Вернуться в меню'
                     form.addEventListener('submit', (e) => {
                         window.location.href = "http://127.0.0.1:8000/"
                     })
@@ -51,20 +55,23 @@ window.addEventListener('DOMContentLoaded', () => {
     function newQuestion(question) {
         clearOldQuestion()
         quest_number.setAttribute("realQuestionId", question.realQuestionId)
-        quest_number.innerHTML = question.number
-        quest_text.innerHTML = " " + question.question
+        quest_number.setAttribute("question-number",question.number)
+        quest_number.innerHTML = '<h4>Вопрос №'+question.number+'&nbsp:</h4>'
+        quest_text.innerHTML = "<h4>&nbsp&nbsp" + question.question+'</h4><br>'
         for (let i in question.answers) {
             let div = document.createElement('div')
             div.classList.add('answer')
             let ans = document.createElement('input')
+            ans.classList.add("form-check-input")
             ans.setAttribute("type", "checkbox")
             ans.setAttribute("id", i)
             ans.setAttribute("name", i)
             ans.setAttribute("value", question.answers[i])
 
             let lbl = document.createElement('label')
+            lbl.classList.add("form-check-label")
             lbl.setAttribute("for", question.answers[i])
-            lbl.innerText = question.answers[i]
+            lbl.insertAdjacentHTML('afterbegin','<h5>'+question.answers[i]+'<h5>')
             div.append(ans);
             div.append(lbl);
             answersBlock.append(div)
@@ -85,7 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
         })
         obj_ans = {
             "answers": list_ans,
-            "question_number": quest_number.innerHTML,
+            "question_number": quest_number.getAttribute("question-number"),
             "realQuestionId": quest_number.getAttribute("realQuestionId")
         }
         getQuestion(obj_ans)

@@ -25,5 +25,6 @@ urlpatterns = [
     path('getquestion/', views.get_question_response),
     path('logout/', views.logoutuser),
     path('success/', views.success_page),
+    path('statistics/', views.get_statistics),
     re_path(r'^account/', include('testingapp.urls')),
 ]

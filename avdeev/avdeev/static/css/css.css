@@ -1,0 +1,14 @@
+form.register {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    position: absolute;
+    padding: 50px;
+    background: #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

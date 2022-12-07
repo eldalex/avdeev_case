@@ -8,23 +8,24 @@
 </head>
 <body>
 {% csrf_token %}
+
 <form class="question__form">
-    <div class="test_id">{{testID}}</div>
+    <div class="test_id" testID="{{testID}}"><h1>Тест №:{{testID}}</h1></div>
     <div class="question__block">
         <div class="question wrapper">
-            <div class="number" style="float: left; display: block">{{number}})</div>
+            <div class="number" style="float: left; display: block">{{number}}</div>
             <div class="question__text">{{question}}</div>
         </div>
         <div class="answers">
             {% for key, value in answers.items %}
             <div class="answer">
                 <input type="checkbox" id={{key}} name={{key}} value="{{value}}"/>
-                <label for="coding">{{value}}</label>
+                <label>{{value}}</label>
             </div>
             {% endfor %}
         </div>
     </div>
-    <button class="submit-answer">submit</button>
+    <button class="submit-answer btn btn-primary">Ответить</button>
 </form>
 
 <script>

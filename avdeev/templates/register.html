@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Log-in{% endblock %}
 {% block content %}
-<h1>Registration</h1>
-<p>Регистрация нового пользователя:</p>
-<form action="." method="post">
-    {{ form.as_p }}
+<form action="." method="post" class="register" style="width: 300px">
+<p style="text-align: center">Регистрация нового пользователя:</p>
+    <div style="width: 200px; height: 220px;text-align: center;">
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" style="margin: 0 auto;display: block;">Submit</button>
+    </div>
     {% csrf_token %}
-    <p><input type="submit" value="Registr"></p>
 </form>
 {% endblock %}

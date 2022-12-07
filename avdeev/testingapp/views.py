@@ -55,21 +55,42 @@ def first_page(request):
         response = redirect('http://127.0.0.1:8000/account/login/')
         return response
     else:
-        user_pass_test = TestResults.objects.values('test_id','test_is_pass').filter(user_id=request.user.id)
-        user_pass_test_list=[]
-        user_not_pass_test_list=[]
+        user_pass_test = TestResults.objects.values('test_id', 'test_is_pass').filter(user_id=request.user.id)
+        user_pass_test_list = []
+        user_not_pass_test_list = []
         for item in user_pass_test:
             if item['test_is_pass']:
                 user_pass_test_list.append(item['test_id'])
             else:
                 user_not_pass_test_list.append(item['test_id'])
-
-
-        pass_tests = Tests.objects.filter(test_id__in=user_pass_test_list)
-        not_pass_test = Tests.objects.filter(test_id__in=user_not_pass_test_list)
-        obj = {'pass_tests': pass_tests.values(),
-               'not_pass_tests':not_pass_test}
+        if user_pass_test_list == user_not_pass_test_list == []:
+            not_pass_test = Tests.objects.all()
+            pass_tests = []
+        else:
+            pass_tests = Tests.objects.filter(test_id__in=user_pass_test_list)
+            not_pass_test = Tests.objects.filter(test_id__in=user_not_pass_test_list)
+        obj = {'pass_tests': pass_tests,
+               'not_pass_tests': not_pass_test}
         return render(request, './index.html', obj)
+
+
+def get_statistics(request):
+    testID = int(json.loads(request.body.decode('utf-8'))['test_id'])
+    userID = request.user.id
+    if TestResults.objects.filter(test_id=testID, user_id=userID).exists():
+        data = TestResults.objects.get(test_id=testID, user_id=userID)
+        response_data = {
+            "true": f"{data.true_answer or 0}",
+            "false": f"{data.wrong_answer or 0}",
+            "true_pers": f"{round(100 * (data.true_answer / (data.true_answer + data.wrong_answer))) or 0}%"
+        }
+    else:
+        response_data = {
+            "true": "0",
+            "false": "0",
+            "true_pers": "0%"
+        }
+    return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 
 def testing_page(request, test_id=0):
@@ -87,7 +108,7 @@ def testing_page(request, test_id=0):
         return render(request, './testing.html', obj)
 
 
-def get_next_question(test_id, question_number,user_id):
+def get_next_question(test_id, question_number, user_id):
     max_question = Testquestion.objects.filter(test_id=test_id).aggregate(Max('question_id'))
     if question_number <= max_question["question_id__max"]:
         next_question = Testquestion.objects.get(test_id=test_id, question_id=question_number)
@@ -107,7 +128,7 @@ def get_next_question(test_id, question_number,user_id):
             "answers": ans
         }
     else:
-        set_test_is_pass(test_id,user_id)
+        set_test_is_pass(test_id, user_id)
         obj = {"finish": "true"}
     return obj
 
@@ -115,11 +136,13 @@ def get_next_question(test_id, question_number,user_id):
 def success_page(request):
     return render(request, './successpage.html')
 
-def set_test_is_pass(test_id,user_id):
+
+def set_test_is_pass(test_id, user_id):
     if TestResults.objects.filter(test_id=test_id, user_id=user_id).exists():
         result = TestResults.objects.get(test_id=test_id, user_id=user_id)
-        result.test_is_pass=True
+        result.test_is_pass = True
         result.save()
+
 
 def check_and_record_answer(answers, test_id, question_number, user, user_id, realQuestionId):
     answers_for_question = list(Answers.objects.filter(id=realQuestionId).values())[0]
