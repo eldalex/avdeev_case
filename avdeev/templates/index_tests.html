@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index_css.css' %}">
+</head>
+<body>
+{% csrf_token %}
+<table class="table table-striped">
+    <tbody>
+    <tr class="table-primary">>
+        <td colspan="2"><h4>Пройденные тесты:</h4></td>
+    </tr>
+    <tr>
+        {% for test in pass_tests %}
+        <td>
+            <div class="pass_test">
+                <h3>
+                    <a href="testing/{{test.test_id}}">пройти {{test.test_name}}</a><br>
+                </h3>
+            </div>
+        </td>
+        <td class="statistic" testID="{{test.test_id}}">11</td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td colspan="2"><h4>Не пройденные тесты</h4></td>
+    </tr>
+    {% for test in not_pass_tests %}
+    <tr class="table-secondary">
+        <td>
+            <div class="not_pass_test">
+                <h3>
+                    <a href="testing/{{test.test_id}}">пройти {{test.test_name}}</a><br>
+                </h3>
+            </div>
+        </td>
+        <td class="statistic" testID="{{test.test_id}}">11</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+<div>
+    <button class="logout btn btn-primary">logout</button>
+</div>
+
+
+<script>
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+</script>
+<script>
+    let logout = document.querySelector('.logout')
+    logout.addEventListener('click', (e) => {
+        const request = new XMLHttpRequest();
+        request.open('GET', 'http://127.0.0.1:8000/logout/')
+        request.send();
+        const reloadTimeout = setTimeout(reloadPage, 10);
+
+        function reloadPage() {
+            clearTimeout(reloadTimeout);
+            location.reload();
+        };
+    })
+</script>
+<script src="{% static 'js/index_js.js' %}"></script>
+
+</body>
+</html>
