@@ -1,14 +1,105 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Log-in{% endblock %}
 {% block content %}
+{% csrf_token %}
+<h1>Панель управления картами:</h1>
 
-<h1>Hello!</h1>
+<table class="table table-primary table-striped table-hover">
+    <tbody class="table-hover cards-table" maxRowCount="15">
+    <tr class="table-info">
+        <td class="table-info">Серия карты</td>
+        <td class="table-info">Номер карты</td>
+        <td class="table-info">Дата выпуска карты</td>
+        <td class="table-info">Дата окончания действия</td>
+        <td class="table-info">Последнее использование</td>
+        <td class="table-info">Баланс</td>
+        <td class="table-info">Статус</td>
+        <td class="table-info"><input class="cardCheckbox" type="checkbox" name="select-all"id="select-all"></td>
+    </tr>
+    <tr class="table-info">
+        <td class="table-info"><input class="filter" type="number" name="card-series" id="card-series" placeholder="100"
+                                      value="{{card_series}}" style="width: 90px; height: 28px"></td>
+        <td class="table-info"><input class="filter" type="number" name="card-number" id="card-number" placeholder="1"
+                                      value="{{card_number}}" style="width: 90px; height: 28px"></td>
+        <td class="table-info"><input class="filter" type="date" name="card-create-date" id="card-create-date"
+                                      value={{card_create_date}}></td>
+        <td class="table-info"><input class="filter" type="date" name="card-end-date" id="card-end-date"
+                                      value={{card_end_date}}></td>
+        <td class="table-info"><input class="filter" type="date" name="card-last-use" id="card-last-use"
+                                      value={{card_last_use}}></td>
+        <td class="table-info"><input class="filter" type="number" name="card-amount" id="card-amount" placeholder="1"
+                                      value="{{card_amount}}" style="width: 90px; height: 28px"></td>
+        <td class="table-info"><select class="filter" name="card-status" id="card-status" style="height: 28px">
+            <option value="4">Выбери статус</option>
+            <optgroup label="Статус">
+                <option value="1">Активна</option>
+                <option value="2">Не активна</option>
+                <option value="3">Просрочена</option>
+                <option value="4">Всё</option>
+            </optgroup>
+        </select>
+        </td>
+        <td class="table-info"><a href="http://127.0.0.1:8000/cards/cardmanagement/"> сброс </a></td>
+    </tr>
+    {% for card in page_obj %}
+    <tr class="table-primary card-item" id-card="{{card.id}}">
+        <td class="table-primary">{{card.card_series}}</td>
+        <td class="table-primary">{{card.card_number}}</td>
+        <td class="table-primary">{{card.card_create_date}}</td>
+        <td class="table-primary">{{card.card_end_date}}</td>
+        <td class="table-primary">{{card.card_last_use}}</td>
+        <td class="table-primary">{{card.card_amount}}</td>
+        <td class="table-primary">{{card.card_status}}</td>
+        <td class="table-primary"><input class="cardCheckbox" type="checkbox" name="card-{{card.id}}"
+                                         id="card-{{card.id}}" value="{{card.id}}"></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+        <a class="pagination-href back-page" href="?page=1{{filter_for_pagination}}">&laquo;Первая</a>
+        <a class="pagination-href back-page" href="?page={{ page_obj.previous_page_number }}{{filter_for_pagination}}"><<</a>
+        {% endif %}
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+        {% if page_obj.has_next %}
+            <a class="pagination-href"
+               href="?page={{ page_obj.next_page_number }}{{filter_for_pagination}}">>></a>
+            <a class="pagination-href"
+               href="?page={{ page_obj.paginator.num_pages }}{{filter_for_pagination}}">Последняя &raquo;</a>
+        {% endif %}
+    </span>
+
+</div>
+
+
 <button id="toGenerator">Перейти в генератор</button>
+<button id="checkExpiredCards">Проверить просроченные карты</button>
+<button id="disableExpiredCards">Отключить просроченные карты</button>
+<button id="disableCheckedCards">Отключить выбранные карты карты</button>
+<button id="enableCheckedCards">Включить выбранные карты карты</button>
+<button id="cardHistory">Посмотреть историю карты</button>
+<button id="testButton">testButton</button>
 <script>
-    const toGenerator = document.getElementById("toGenerator")
-    toGenerator.addEventListener('click',(e)=>{
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const toGenerator = document.getElementById('toGenerator')
+
+
+    toGenerator.addEventListener('click', (e) => {
         e.preventDefault()
-        window.location.href="http://127.0.0.1:8000/cards/cardgenerator/"
+        window.location.href = "http://127.0.0.1:8000/cards/cardgenerator/"
     })
+
+
 </script>
+<script src="{% static 'js/card_index.js' %}"></script>
+
 {% endblock %}
+
+

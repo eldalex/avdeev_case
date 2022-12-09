@@ -1,6 +1,6 @@
 "use strict"
 window.addEventListener('DOMContentLoaded', () => {
-    const buttonTable = document.querySelector('.crtable');
+    // const buttonTable = document.querySelector('.crtable');
     const from = document.querySelector('form');
     from.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
         request.addEventListener('load', () => {
             if (request.status === 200) {
                 let answ = JSON.parse(request.response)
-                if (answ["series-exist"] == 'true') {
+                if (answ["series-exist"] === 'true') {
                     alert("Такая серия существует")
                 } else {
                     generateCards(formData)
@@ -91,5 +91,5 @@ window.addEventListener('DOMContentLoaded', () => {
             num += 1
         }
         from.append(tableP)
-    };
+    }
 });

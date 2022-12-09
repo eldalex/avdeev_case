@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Log-in{% endblock %}
+{% block content %}
+
+<table class="table table-primary">
+    <tbody>
+    {% for item in history %}
+    <tr class="table-dark">
+        <td colspan="4" class="table-dark" style="text-align: center">Серия карты:{{item.card.first.card_id.card_series}}, Карта №{{item.card.first.card_id.card_number}}
+        </td>
+    </tr>
+    <td class="table-primary">Серия</td>
+    <td class="table-primary">Номер</td>
+    <td class="table-primary">Операция</td>
+    <td class="table-primary">Детали операции</td>
+    {% for card in item.card %}
+    <tr class="table-secondary">
+        <td class="table-secondary">{{card.card_id.card_series}}</td>
+        <td class="table-secondary">{{card.card_id.card_number}}</td>
+        <td class="table-secondary">{{card.card_operation}}</td>
+        <td class="table-secondary">{{card.card_operation_detail}}</td>
+    </tr>
+    {% endfor %}
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

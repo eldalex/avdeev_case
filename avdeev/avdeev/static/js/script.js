@@ -1,6 +1,5 @@
 "use strict"
 window.addEventListener('DOMContentLoaded', () => {
-
     const form = document.querySelector('.question__form'),
         answersBlock = document.querySelector('.answers'),
         quest_number = form.querySelector('.number'),
@@ -10,7 +9,6 @@ window.addEventListener('DOMContentLoaded', () => {
         submitButton = document.querySelector('.submit-answer');
 
     clearOldQuestion()
-
 
     function clearOldQuestion() {
         const answers = answersBlock.querySelectorAll('.answer')
@@ -38,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 console.log(question)
                 if ("finish" in question) {
                     clearOldQuestion()
-                    submitButton.innerHTML='Вернуться в меню'
+                    submitButton.innerHTML = 'Вернуться в меню'
                     form.addEventListener('submit', (e) => {
                         window.location.href = "http://127.0.0.1:8000/"
                     })
@@ -55,9 +53,9 @@ window.addEventListener('DOMContentLoaded', () => {
     function newQuestion(question) {
         clearOldQuestion()
         quest_number.setAttribute("realQuestionId", question.realQuestionId)
-        quest_number.setAttribute("question-number",question.number)
-        quest_number.innerHTML = '<h4>Вопрос №'+question.number+'&nbsp:</h4>'
-        quest_text.innerHTML = "<h4>&nbsp&nbsp" + question.question+'</h4><br>'
+        quest_number.setAttribute("question-number", question.number)
+        quest_number.innerHTML = '<h4>Вопрос №' + question.number + '&nbsp:</h4>'
+        quest_text.innerHTML = "<h4>&nbsp&nbsp" + question.question + '</h4><br>'
         for (let i in question.answers) {
             let div = document.createElement('div')
             div.classList.add('answer')
@@ -71,13 +69,12 @@ window.addEventListener('DOMContentLoaded', () => {
             let lbl = document.createElement('label')
             lbl.classList.add("form-check-label")
             lbl.setAttribute("for", question.answers[i])
-            lbl.insertAdjacentHTML('afterbegin','<h5>'+question.answers[i]+'<h5>')
+            lbl.insertAdjacentHTML('afterbegin', '<h5>' + question.answers[i] + '<h5>')
             div.append(ans);
             div.append(lbl);
             answersBlock.append(div)
         }
     }
-
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -97,5 +94,4 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         getQuestion(obj_ans)
     })
-
 });
