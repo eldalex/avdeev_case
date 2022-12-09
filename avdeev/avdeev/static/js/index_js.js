@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let nowTest = {};
         nowTest["test_id"] = testID;
         const request = new XMLHttpRequest();
-        request.open('POST', 'http://127.0.0.1:8000/statistics/');
+        request.open('POST', 'http://127.0.0.1:8000/test/statistics/');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         request.setRequestHeader('X-CSRFToken', csrftoken);
         let data = JSON.stringify(nowTest);

@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
         next["test_id"] = test_id.getAttribute("testID");
         console.log(next)
         const request = new XMLHttpRequest();
-        request.open('POST', 'http://127.0.0.1:8000/getquestion/');
+        request.open('POST', 'http://127.0.0.1:8000/test/getquestion/');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         request.setRequestHeader('X-CSRFToken', csrftoken);
         let data = JSON.stringify(next);

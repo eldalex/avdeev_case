@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Log-in{% endblock %}
+{% block content %}
+
+<h1>Hello!</h1>
+<button id="toGenerator">Перейти в генератор</button>
+<script>
+    const toGenerator = document.getElementById("toGenerator")
+    toGenerator.addEventListener('click',(e)=>{
+        e.preventDefault()
+        window.location.href="http://127.0.0.1:8000/cards/cardgenerator/"
+    })
+</script>
+{% endblock %}

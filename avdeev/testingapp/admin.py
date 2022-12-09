@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import Tests
-from .models import Testquestion
-from .models import Answers
+from .models import Tests, Testquestion, Answers
 from django import forms
 from django.core.exceptions import ValidationError
 
@@ -10,7 +8,7 @@ class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answers
         fields = ('question_id', 'answer_1_text', 'true_answer_1', 'answer_2_text', 'true_answer_2', 'answer_3_text',
-                  'true_answer_3', 'answer_4_text', 'true_answer_4', 'answer_5_text', 'true_answer_5','answer_6_text',
+                  'true_answer_3', 'answer_4_text', 'true_answer_4', 'answer_5_text', 'true_answer_5', 'answer_6_text',
                   'true_answer_6',)
         readonly_fields = ('question_id',)
 
@@ -36,7 +34,7 @@ class AnswerAdm(admin.StackedInline):
     form = AnswerForm
     model = Answers
     fields = ('question_id', 'answer_1_text', 'true_answer_1', 'answer_2_text', 'true_answer_2', 'answer_3_text',
-              'true_answer_3', 'answer_4_text', 'true_answer_4', 'answer_5_text', 'true_answer_5','answer_6_text',
+              'true_answer_3', 'answer_4_text', 'true_answer_4', 'answer_5_text', 'true_answer_5', 'answer_6_text',
               'true_answer_6',)
     readonly_fields = ('question_id',)
 
@@ -49,10 +47,12 @@ class TestsAdmin(admin.ModelAdmin):
         print('TestsAdmin')
         super(TestsAdmin, self).save(*args, **kwargs)
 
+
 class TestquestionAdmin(admin.ModelAdmin):
     list_display = ('question_id', 'test_id', 'question_text',)
-    list_display_links = ('question_id','question_text',)
+    list_display_links = ('question_id', 'question_text',)
     inlines = [AnswerAdm, ]
+
 
 admin.site.register(Tests, TestsAdmin)
 admin.site.register(Testquestion, TestquestionAdmin)

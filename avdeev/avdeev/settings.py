@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'testingapp.apps.TestingappConfig',
+    'cardmanagement.apps.CardmanagementConfig',
 ]
 
 MIDDLEWARE = [

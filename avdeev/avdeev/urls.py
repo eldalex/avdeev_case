@@ -18,16 +18,11 @@ from django.urls import path
 from testingapp import views
 from django.urls import include, re_path
 from django.contrib import admin
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.start_index),
-    # Блок приложения testingapp
-    path('appfortests', views.first_page_tests),
-    path('testing/<int:test_id>/', views.testing_page),
-    path('getquestion/', views.get_question_response),
-    path('logout/', views.logoutuser),
-    path('success/', views.success_page),
-    path('statistics/', views.get_statistics),
-    re_path(r'^account/', include('testingapp.urls')),
+    path('test/', include('testingapp.urls')),
     # Блок приложения cardmanagement
+    path('cards/', include('cardmanagement.urls')),
 ]

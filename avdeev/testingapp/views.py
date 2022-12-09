@@ -1,7 +1,5 @@
-# from django.shortcuts import render
 from django.db.models import Max
 import json
-# from django.http import HttpResponse
 from django.shortcuts import redirect
 from .models import Tests, Testquestion, Answers, TestResults
 from django.http import HttpResponse
@@ -23,7 +21,7 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    response = redirect('http://127.0.0.1:8000/')
+                    response = redirect('http://127.0.0.1:8000/test/appfortests')
                     return response
                 else:
                     return HttpResponse('Disabled account')
@@ -37,7 +35,7 @@ def user_login(request):
 def user_register(request):
     if request.method == 'POST':
         User.objects.create_user(request.POST['username'], request.POST['email'], request.POST['password'])
-        response = redirect('http://127.0.0.1:8000/success/')
+        response = redirect('http://127.0.0.1:8000/test/success/')
         return response
     else:
         form = RegisterForm()
@@ -50,9 +48,13 @@ def logoutuser(request):
     return response
 
 
-def first_page(request):
+def start_index(request):
+    return render(request, './index.html')
+
+
+def first_page_tests(request):
     if request.user.username == '':
-        response = redirect('http://127.0.0.1:8000/account/login/')
+        response = redirect('http://127.0.0.1:8000/test/login/')
         return response
     else:
         user_pass_test = TestResults.objects.values('test_id', 'test_is_pass').filter(user_id=request.user.id)
@@ -71,7 +73,7 @@ def first_page(request):
             not_pass_test = Tests.objects.filter(test_id__in=user_not_pass_test_list)
         obj = {'pass_tests': pass_tests,
                'not_pass_tests': not_pass_test}
-        return render(request, './index.html', obj)
+        return render(request, './index_tests.html', obj)
 
 
 def get_statistics(request):
@@ -95,7 +97,7 @@ def get_statistics(request):
 
 def testing_page(request, test_id=0):
     if request.user.username == '':
-        response = redirect('http://127.0.0.1:8000/account/login/')
+        response = redirect('http://127.0.0.1:8000/login/')
         return response
     else:
         test_id = test_id

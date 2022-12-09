@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}generator{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/gen_card.css' %}">{% endblock %}
+{% block content %}
+{% csrf_token %}
+<h1>Генератор карт</h1>
+
+<form class="card-gen-params wrapper">
+    <fieldset>
+        <legend>Ведите параметры для генерации карт</legend>
+        <p class="form-row">
+            <label for="card-series">Введите серию</label>
+            <input type="number" name="card-series" id="card-series" placeholder="100">
+        </p>
+        <p class="form-row">
+            <label for="card-count">Введите количество созаваемых карт</label>
+            <input type="number" name="card-count" id="card-count" placeholder="100">
+        </p>
+        <p class="form-row">
+            <label for="card-create-date">Введите дату начала действия карт</label>
+            <input type="datetime-local" name="card-create-date" id="card-create-date">
+        </p>
+        <p class="form-row">
+            <label>Срок действия карты:</label>
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked="">
+                1 месяц
+            </label>
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="6">
+                6 месяцев
+            </label>
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios3" value="6">
+                12 месяцев
+            </label>
+        </p>
+        <p class="form-row">
+            <label for="card-amount">Введите баланс создаваемых карт</label>
+            <input type="number" name="card-amount" id="card-amount" placeholder="5000">
+        </p>
+        <p class="form-row">
+            <button type="submit">Создать</button>
+        </p>
+    </fieldset>
+</form>
+<script>
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+</script>
+<script src="{% static 'js/generator_js.js' %}"></script>
+{% endblock %}
+

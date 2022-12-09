@@ -1,8 +1,14 @@
-from django.urls import include, re_path
+from django.urls import path
 from . import views
 
 urlpatterns = [
     # post views
-    re_path(r'^login/$', views.user_login, name='login'),
-    re_path(r'^registration/$', views.user_register, name='registration'),
+    path('appfortests', views.first_page_tests),
+    path('testing/<int:test_id>/', views.testing_page),
+    path('getquestion/', views.get_question_response),
+    path('logout/', views.logoutuser),
+    path('statistics/', views.get_statistics),
+    path('success/', views.success_page),
+    path('login/', views.user_login, name='login'),
+    path('registration/', views.user_register, name='registration'),
 ]
