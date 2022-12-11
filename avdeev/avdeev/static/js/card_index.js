@@ -1,6 +1,7 @@
 "use strict"
 window.addEventListener('DOMContentLoaded', () => {
     const disableExpiredCards = document.getElementById('disableExpiredCards');
+    const linkClear = document.querySelector('.clear')
     const checkExpiredCards = document.getElementById('checkExpiredCards');
     const disableCheckedCards = document.getElementById('disableCheckedCards');
     const enableCheckedCards = document.getElementById('enableCheckedCards');
@@ -14,6 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const pageOf = document.querySelector('.current');
     let lastStatusFilter;
     let lastFilter = '?page=1';
+
+    linkClear.setAttribute("href",window.location.protocol+'//'+(window.location.host)+'/cards/cardmanagement/')
 
     selectAllCheckbox.addEventListener('change', () => {
         const cardItems = document.querySelectorAll('.card-item');
