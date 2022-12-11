@@ -162,8 +162,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alert("Вы не выбраи ни одной карты")
         } else {
             document.cookie = `params=${listCardToHistory}`
-            window.location.href = `/cards/cardmanagement/cardhistory/`
-            window.location.href = `/cards/cardmanagement/cardhistory/`
+            window.location.href=window.location.protocol+'//'+(window.location.host)+'/cards/cardmanagement/cardhistory/'
         }
     })
 

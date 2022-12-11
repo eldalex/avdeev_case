@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     clearOldQuestion()
                     submitButton.innerHTML = 'Вернуться в меню'
                     form.addEventListener('submit', (e) => {
-                        window.location.href = "/test/appfortests"
+                        window.location.href=window.location.protocol+'//'+(window.location.host)+'/test/appfortests'
                     })
 
                 } else newQuestion(question);
