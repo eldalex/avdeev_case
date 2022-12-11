@@ -57,7 +57,7 @@
     let logout = document.querySelector('.logout')
     logout.addEventListener('click', (e) => {
         const request = new XMLHttpRequest();
-        request.open('GET', 'http://127.0.0.1:8000/test/logout/')
+        request.open('GET', 'test/logout/')
         request.send();
         const reloadTimeout = setTimeout(reloadPage, 10);
 

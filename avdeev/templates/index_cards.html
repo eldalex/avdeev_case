@@ -40,7 +40,7 @@
             </optgroup>
         </select>
         </td>
-        <td class="table-info"><a href="http://127.0.0.1:8000/cards/cardmanagement/"> сброс </a></td>
+        <td class="table-info"><a href="cards/cardmanagement/"> сброс </a></td>
     </tr>
     {% for card in page_obj %}
     <tr class="table-primary card-item" id-card="{{card.id}}">
@@ -94,7 +94,7 @@
     const toGenerator = document.getElementById('toGenerator')
     toGenerator.addEventListener('click', (e) => {
         e.preventDefault()
-        window.location.href = "http://127.0.0.1:8000/cards/cardgenerator/"
+        window.location.href = "cards/cardgenerator/"
     })
 
 
