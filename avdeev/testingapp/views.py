@@ -22,7 +22,7 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    response = redirect('http://127.0.0.1:8000/test/appfortests')
+                    response = redirect('test/appfortests')
                     return response
                 else:
                     return HttpResponse('Disabled account')
@@ -36,7 +36,7 @@ def user_login(request):
 def user_register(request):
     if request.method == 'POST':
         User.objects.create_user(request.POST['username'], request.POST['email'], request.POST['password'])
-        response = redirect('http://127.0.0.1:8000/test/success/')
+        response = redirect('test/success/')
         return response
     else:
         form = RegisterForm()
@@ -45,7 +45,7 @@ def user_register(request):
 
 def logoutuser(request):
     logout(request)
-    response = redirect('http://127.0.0.1:8000/')
+    response = redirect('/')
     return response
 
 
@@ -55,7 +55,7 @@ def start_index(request):
 
 def first_page_tests(request):
     if request.user.username == '':
-        response = redirect('http://127.0.0.1:8000/test/login/')
+        response = redirect('test/login/')
         return response
     else:
         user_pass_test = TestResults.objects.values('test_id', 'test_is_pass').filter(user_id=request.user.id)
@@ -96,7 +96,7 @@ def get_statistics(request):
 
 def testing_page(request, test_id=0):
     if request.user.username == '':
-        response = redirect('http://127.0.0.1:8000/login/')
+        response = redirect('login/')
         return response
     else:
         test_id = test_id
