@@ -28,8 +28,7 @@ SECRET_KEY = 'SECRET_KEY переопределится из settings_local'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
