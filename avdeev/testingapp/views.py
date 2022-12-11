@@ -8,6 +8,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from .forms import LoginForm, RegisterForm
 from django.contrib.auth import logout
+from django.db.models import Q
 
 
 # Create your views here.
@@ -59,22 +60,20 @@ def first_page_tests(request):
     else:
         user_pass_test = TestResults.objects.values('test_id', 'test_is_pass').filter(user_id=request.user.id)
         user_pass_test_list = []
-        user_not_pass_test_list = []
         for item in user_pass_test:
             if item['test_is_pass']:
                 user_pass_test_list.append(item['test_id'])
-            else:
-                user_not_pass_test_list.append(item['test_id'])
-        if user_pass_test_list == user_not_pass_test_list == []:
-            not_pass_test = Tests.objects.all()
-            pass_tests = []
-        else:
-            pass_tests = Tests.objects.filter(test_id__in=user_pass_test_list)
-            not_pass_test = Tests.objects.filter(test_id__in=user_not_pass_test_list)
+
+        pass_tests = Tests.objects.filter(test_id__in=user_pass_test_list)
+        not_pass_test = Tests.objects.filter(
+            Q(test_parent__in=user_pass_test_list) | Q(test_parent__isnull=True)).exclude(
+            test_id__in=user_pass_test_list, )
         obj = {'pass_tests': pass_tests,
                'not_pass_tests': not_pass_test}
         return render(request, './index_tests.html', obj)
 
+
+# Q(test_parent__in=user_pass_test_list) | Q(test_parent__nullis=True)
 
 def get_statistics(request):
     testID = int(json.loads(request.body.decode('utf-8'))['test_id'])
@@ -101,9 +100,11 @@ def testing_page(request, test_id=0):
         return response
     else:
         test_id = test_id
+        test_name = Tests.objects.get(pk=test_id).test_name
         test_question = Testquestion.objects.all().filter(test_id=test_id, question_id=1).first()
         obj = {
             "testID": test_id,
+            "testName": test_name,
             "number": 1,
             "question": test_question.question_text,
         }
@@ -117,7 +118,6 @@ def get_next_question(test_id, question_number, user_id):
         answers_for_question = list(Answers.objects.filter(id=next_question.id).values())[0]
         num = 1
         ans = {}
-        ans_id = {}
         for i in answers_for_question:
             if "_text" in i and answers_for_question[i] is not None:
                 ans.update({num: answers_for_question[i]})
@@ -146,7 +146,7 @@ def set_test_is_pass(test_id, user_id):
         result.save()
 
 
-def check_and_record_answer(answers, test_id, question_number, user, user_id, realQuestionId):
+def check_and_record_answer(answers, test_id, question_number, user_id, realQuestionId):
     answers_for_question = list(Answers.objects.filter(id=realQuestionId).values())[0]
     true_answers = []
     for i in answers_for_question:
@@ -193,7 +193,7 @@ def get_question_response(request):
         realQuestionId = None
 
     if answers and test_id and question_number:
-        check_and_record_answer(answers, test_id, question_number, request.user, request.user.id, realQuestionId)
+        check_and_record_answer(answers, test_id, question_number, request.user.id, realQuestionId)
         response_data = get_next_question(test_id, question_number + 1, request.user.id)
     elif test_id and question_number:
         response_data = get_next_question(test_id, question_number, request.user.id)

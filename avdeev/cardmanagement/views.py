@@ -188,15 +188,27 @@ def generate_cards(request):
     return HttpResponse(json.dumps(response_with_new_cards), content_type="application/json")
 
 
-def push_history_record(id, action):
+def push_history_record(id, action, amount=0):
     new_history_record = CardHistoryUse()
     if action == 1:
         new_history_record.card_id = CardBaseTable.objects.get(pk=id)
-        new_history_record.card_operation = OperationCard.objects.get(pk=3)
-        new_history_record.card_operation_detail = datetime.now()
+        new_history_record.card_operation = OperationCard.objects.get(pk=1)
+        new_history_record.card_operation_detail = amount
     if action == 2:
         new_history_record.card_id = CardBaseTable.objects.get(pk=id)
+        new_history_record.card_operation = OperationCard.objects.get(pk=2)
+        new_history_record.card_operation_detail = amount
+    if action == 3:
+        new_history_record.card_id = CardBaseTable.objects.get(pk=id)
+        new_history_record.card_operation = OperationCard.objects.get(pk=3)
+        new_history_record.card_operation_detail = datetime.now()
+    if action == 4:
+        new_history_record.card_id = CardBaseTable.objects.get(pk=id)
         new_history_record.card_operation = OperationCard.objects.get(pk=4)
+        new_history_record.card_operation_detail = datetime.now()
+    if action == 5:
+        new_history_record.card_id = CardBaseTable.objects.get(pk=id)
+        new_history_record.card_operation = OperationCard.objects.get(pk=5)
         new_history_record.card_operation_detail = datetime.now()
 
     new_history_record.save()
@@ -230,15 +242,19 @@ def check_expired_card(request, action=0):
         }
     return HttpResponse(json.dumps(response_data), content_type="application/json")
 
+def update_use_date(id):
+    card = CardBaseTable.objects.get(pk=id)
+    card.card_last_use = datetime.now()
+    card.save()
 
 def disable_checked_card(request):
     list_card_to_didable = [int(i) for i in json.loads(request.body.decode("utf-8"))]
     cards_to_disable = CardBaseTable.objects.filter(pk__in=list_card_to_didable)
     for card in cards_to_disable:
         card.card_status = StatusCard.objects.get(pk=2)
-        push_history_record(card.id, 2)
+        push_history_record(card.id, 4)
         card.save()
-
+        update_use_date(card.id)
     print(len(cards_to_disable))
     response_data = {
         "отключили": list_card_to_didable
@@ -251,8 +267,9 @@ def enable_checked_card(request):
     cards_to_enable = CardBaseTable.objects.filter(pk__in=list_card_to_enable)
     for card in cards_to_enable:
         card.card_status = StatusCard.objects.get(pk=1)
-        push_history_record(card.id, 1)
+        push_history_record(card.id, 3)
         card.save()
+        update_use_date(card.id)
 
     print(len(cards_to_enable))
     response_data = {
@@ -271,3 +288,48 @@ def card_history(request):
     print('stop')
     print(all_cards)
     return render(request, './card_history.html', {'history': all_cards})
+
+
+def check_balance_card(id):
+    card = CardBaseTable.objects.get(pk=id)
+    if card.card_amount==0:
+        push_history_record(id,5)
+        card.card_status = StatusCard.objects.get(pk=2)
+        push_history_record(id, 4)
+        card.save()
+        update_use_date(card.id)
+
+def account_movement(request):
+    body = json.loads(request.body.decode("utf-8"))
+    cards = [int(n) for n in body["cards"]]
+    success_count = 0
+    error_count = 0
+    for card in cards:
+        card = CardBaseTable.objects.get(pk=card)
+        if card.card_status == StatusCard.objects.get(pk=1):
+            if body['action'] == 'push':
+                card.card_amount += int(body['amount'])
+                card.save()
+                update_use_date(card.id)
+                push_history_record(card.id, 1, int(body['amount']))
+                success_count += 1
+            elif body['action'] == "pull":
+                if card.card_amount < int(body['amount']):
+                    error_count += 1
+                else:
+                    card.card_amount -= int(body['amount'])
+                    push_history_record(card.id, 2, int(body['amount']))
+                    success_count += 1
+                card.save()
+                update_use_date(card.id)
+            check_balance_card(card.id)
+        else:
+            error_count += 1
+
+    print(body)
+
+    response_data = {
+        "Успех": success_count,
+        "Неудача": error_count
+    }
+    return HttpResponse(json.dumps(response_data), content_type="application/json")

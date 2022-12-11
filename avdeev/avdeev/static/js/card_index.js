@@ -1,11 +1,14 @@
 "use strict"
 window.addEventListener('DOMContentLoaded', () => {
-    const disableExpiredCards = document.getElementById('disableExpiredCards')
-    const checkExpiredCards = document.getElementById('checkExpiredCards')
-    const disableCheckedCards = document.getElementById('disableCheckedCards')
-    const enableCheckedCards = document.getElementById('enableCheckedCards')
-    const selectAllCheckbox = document.getElementById('select-all')
-    const toHistory = document.getElementById('cardHistory')
+    const disableExpiredCards = document.getElementById('disableExpiredCards');
+    const checkExpiredCards = document.getElementById('checkExpiredCards');
+    const disableCheckedCards = document.getElementById('disableCheckedCards');
+    const enableCheckedCards = document.getElementById('enableCheckedCards');
+    const selectAllCheckbox = document.getElementById('select-all');
+    const toHistory = document.getElementById('cardHistory');
+    const withdrawalOfFunds = document.getElementById('withdrawalOfFunds');
+    const amountMovement = document.getElementById('amount');
+    const inputOfFunds = document.getElementById('inputOfFunds');
     const testButton = document.getElementById('testButton');
     const filters = document.querySelectorAll('.filter');
     const pageOf = document.querySelector('.current');
@@ -24,17 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         }
     })
-
-    function logCheckbox() {
-        const cardItems = document.querySelectorAll('.card-item');
-        cardItems.forEach(item => {
-            const currentItemCheckbox = item.querySelector('.cardCheckbox');
-            currentItemCheckbox.checked = 1
-        })
-
-    }
-
-    testButton.addEventListener('click', logCheckbox)
 
     filters.forEach(item => {
         item.addEventListener('input', (e) => {
@@ -61,7 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function updateFilterRequest(updateFilterObj) {
         const request = new XMLHttpRequest();
-        request.open('POST', 'http://127.0.0.1:8000/cards/cardmanagement/updatefilter/');
+        request.open('POST', '/cards/cardmanagement/updatefilter/');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         request.setRequestHeader('X-CSRFToken', csrftoken);
         let data = JSON.stringify(updateFilterObj);
@@ -139,14 +131,15 @@ window.addEventListener('DOMContentLoaded', () => {
     function checkOrDisable(action) {
         // debugger
         const request = new XMLHttpRequest();
-        request.open('POST', `http://127.0.0.1:8000/cards/cardmanagement/checkexpired/${action}/`);
+        request.open('POST', `/cards/cardmanagement/checkexpired/${action}/`);
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         request.setRequestHeader('X-CSRFToken', csrftoken);
         request.send();
         request.addEventListener('load', () => {
             if (request.status === 200) {
                 let answ = JSON.parse(request.response)
-                console.log(answ)
+                reloadPage()
+                console.log(answ);
             } else {
                 console.log('что то пошло не так');
             }
@@ -169,8 +162,8 @@ window.addEventListener('DOMContentLoaded', () => {
             alert("Вы не выбраи ни одной карты")
         } else {
             document.cookie = `params=${listCardToHistory}`
-            window.location.href = `http://127.0.0.1:8000/cards/cardmanagement/cardhistory/`
-            window.location.href = `http://127.0.0.1:8000/cards/cardmanagement/cardhistory/`
+            window.location.href = `/cards/cardmanagement/cardhistory/`
+            window.location.href = `/cards/cardmanagement/cardhistory/`
         }
     })
 
@@ -183,7 +176,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (currentItemCheckbox.checked) listCardToDidable.push(currentItemCheckbox.value)
         })
         const request = new XMLHttpRequest();
-        request.open('POST', `http://127.0.0.1:8000/cards/cardmanagement/${act}ablechacked/`);
+        request.open('POST', `/cards/cardmanagement/${act}ablechacked/`);
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         request.setRequestHeader('X-CSRFToken', csrftoken);
         let data = JSON.stringify(listCardToDidable);
@@ -191,22 +184,56 @@ window.addEventListener('DOMContentLoaded', () => {
         request.addEventListener('load', () => {
             if (request.status === 200) {
                 let answ = JSON.parse(request.response)
-                console.log(answ)
+                reloadPage()
+                console.log(answ);
             } else {
                 console.log('что то пошло не так');
             }
         });
-        const reloadTimeout = setTimeout(reloadPage, 10);
+        reloadPage()
+    }
 
+    function reloadPage() {
+        const reloadTimeout = setTimeout(reloadPage, 10);
         function reloadPage() {
             clearTimeout(reloadTimeout);
             location.reload()
         }
     }
 
+    function accountMovement(act, amount) {
+        let listCardToMovement = []
+        const cardItems = document.querySelectorAll('.card-item');
+        cardItems.forEach(item => {
+            const currentItemCheckbox = item.querySelector('.cardCheckbox');
+            if (currentItemCheckbox.checked) listCardToMovement.push(currentItemCheckbox.value)
+        })
+        const action = {
+            "action": act,
+            "amount": amount,
+            "cards": listCardToMovement
+        }
+        const request = new XMLHttpRequest();
+        request.open('POST', `/cards/cardmanagement/accountmovement/`);
+        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        request.setRequestHeader('X-CSRFToken', csrftoken);
+        let data = JSON.stringify(action);
+        request.send(data);
+        request.addEventListener('load', () => {
+            if (request.status === 200) {
+                let answ = JSON.parse(request.response)
+            } else {
+                console.log('что то пошло не так');
+            }
+        });
+    }
 
+    inputOfFunds.addEventListener('click', () => {
+        accountMovement("push", amountMovement.value)
+        reloadPage();
+    })
+    withdrawalOfFunds.addEventListener('click', () => {
+        accountMovement("pull", amountMovement.value)
+        reloadPage();
+    })
 });
-
-
-// <a className="pagination-href" href="?page={{ page_obj.next_page_number }}&card-series={{card_series}}&card-number={{card_number}}&card-create-date={{card_create_date}}&card-end-date={{card_end_date}}&card-last-use={{card_last_use}}&card-amount={{card_amount}}&card-status={{card_status}}">>></a>
-// <a className="pagination-href" href="?page={{ page_obj.paginator.num_pages }}&card-series={{card_series}}&card-number={{card_number}}&card-create-date={{card_create_date}}&card-end-date={{card_end_date}}&card-last-use={{card_last_use}}&card-amount={{card_amount}}&card-status={{card_status}}">Последняя &raquo;</a>

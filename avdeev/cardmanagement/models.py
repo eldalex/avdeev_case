@@ -47,3 +47,10 @@ class CardHistoryUse(models.Model):
     card_id = models.ForeignKey(CardBaseTable, on_delete=models.PROTECT, null=True, blank=True, verbose_name='Номер карты')
     card_operation = models.ForeignKey(OperationCard, on_delete=models.PROTECT, null=True, blank=True, verbose_name='Операция по карте')
     card_operation_detail = models.CharField(max_length=200,null=True, blank=True, verbose_name='Детали операции')
+
+    def __str__(self):
+        return str(self.card_id)
+
+    class Meta:
+        verbose_name = 'История операций по карте'
+        verbose_name_plural = 'История операций по картам'

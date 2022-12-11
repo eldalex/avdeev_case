@@ -5,6 +5,8 @@ from django.db import models
 class Tests(models.Model):
     test_id = models.AutoField(verbose_name='id теста', primary_key=True)
     test_name = models.CharField(max_length=200, verbose_name='Наименование')
+    test_parent = models.ForeignKey("self", on_delete=models.CASCADE, verbose_name='Предыдущий тест', null=True,
+                                    blank=True)
 
     def __str__(self):
         return self.test_name

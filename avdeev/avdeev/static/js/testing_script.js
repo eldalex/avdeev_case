@@ -22,9 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
     function getQuestion(next = {"question_number": "1"}) {
 
         next["test_id"] = test_id.getAttribute("testID");
-        console.log(next)
         const request = new XMLHttpRequest();
-        request.open('POST', 'http://127.0.0.1:8000/test/getquestion/');
+        request.open('POST', '/test/getquestion/');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         request.setRequestHeader('X-CSRFToken', csrftoken);
         let data = JSON.stringify(next);
@@ -33,12 +32,11 @@ window.addEventListener('DOMContentLoaded', () => {
         request.addEventListener('load', () => {
             if (request.status === 200) {
                 question = JSON.parse(request.response);
-                console.log(question)
                 if ("finish" in question) {
                     clearOldQuestion()
                     submitButton.innerHTML = 'Вернуться в меню'
                     form.addEventListener('submit', (e) => {
-                        window.location.href = "http://127.0.0.1:8000/"
+                        window.location.href = "/test/appfortests"
                     })
 
                 } else newQuestion(question);

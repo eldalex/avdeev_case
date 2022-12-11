@@ -1,0 +1,4207 @@
+[
+  {
+    "model": "cardmanagement.statuscard",
+    "pk": 1,
+    "fields": {
+      "Status_name": "Активна"
+    }
+  },
+  {
+    "model": "cardmanagement.statuscard",
+    "pk": 2,
+    "fields": {
+      "Status_name": "Не активна"
+    }
+  },
+  {
+    "model": "cardmanagement.statuscard",
+    "pk": 3,
+    "fields": {
+      "Status_name": "Просрочена"
+    }
+  },
+  {
+    "model": "cardmanagement.operationcard",
+    "pk": 1,
+    "fields": {
+      "Operation_name": "Пополнение баланса"
+    }
+  },
+  {
+    "model": "cardmanagement.operationcard",
+    "pk": 2,
+    "fields": {
+      "Operation_name": "Списание баланса"
+    }
+  },
+  {
+    "model": "cardmanagement.operationcard",
+    "pk": 3,
+    "fields": {
+      "Operation_name": "Активация"
+    }
+  },
+  {
+    "model": "cardmanagement.operationcard",
+    "pk": 4,
+    "fields": {
+      "Operation_name": "Деактивация"
+    }
+  },
+  {
+    "model": "cardmanagement.operationcard",
+    "pk": 5,
+    "fields": {
+      "Operation_name": "Погашение"
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 25,
+    "fields": {
+      "card_series": 101,
+      "card_number": 1,
+      "card_create_date": "2022-12-07T18:31:00Z",
+      "card_end_date": "2023-06-07T18:31:00Z",
+      "card_last_use": "2022-12-10T20:25:35.154Z",
+      "card_amount": 290,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 26,
+    "fields": {
+      "card_series": 102,
+      "card_number": 1,
+      "card_create_date": "2022-12-07T18:31:00Z",
+      "card_end_date": "2023-06-07T18:31:00Z",
+      "card_last_use": "2022-12-10T20:26:31.537Z",
+      "card_amount": 100,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 27,
+    "fields": {
+      "card_series": 111,
+      "card_number": 1,
+      "card_create_date": "2022-12-07T19:20:00Z",
+      "card_end_date": "2023-06-07T19:20:00Z",
+      "card_last_use": "2022-12-10T20:26:14.493Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 28,
+    "fields": {
+      "card_series": 111,
+      "card_number": 2,
+      "card_create_date": "2022-12-07T19:20:00Z",
+      "card_end_date": "2023-06-07T19:20:00Z",
+      "card_last_use": "2022-12-07T19:20:00Z",
+      "card_amount": 200,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 29,
+    "fields": {
+      "card_series": 1111,
+      "card_number": 1,
+      "card_create_date": "2022-12-07T19:21:00Z",
+      "card_end_date": "2023-06-07T19:21:00Z",
+      "card_last_use": "2022-12-07T19:21:00Z",
+      "card_amount": 200,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 30,
+    "fields": {
+      "card_series": 1111,
+      "card_number": 2,
+      "card_create_date": "2022-12-07T19:21:00Z",
+      "card_end_date": "2023-06-07T19:21:00Z",
+      "card_last_use": "2022-12-07T19:21:00Z",
+      "card_amount": 200,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 31,
+    "fields": {
+      "card_series": 11112,
+      "card_number": 1,
+      "card_create_date": "2022-12-07T19:21:00Z",
+      "card_end_date": "2023-06-07T19:21:00Z",
+      "card_last_use": "2022-12-07T19:21:00Z",
+      "card_amount": 200,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 32,
+    "fields": {
+      "card_series": 11112,
+      "card_number": 2,
+      "card_create_date": "2022-12-07T19:21:00Z",
+      "card_end_date": "2023-06-07T19:21:00Z",
+      "card_last_use": "2022-12-07T19:21:00Z",
+      "card_amount": 200,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 33,
+    "fields": {
+      "card_series": 11112,
+      "card_number": 3,
+      "card_create_date": "2022-12-07T19:21:00Z",
+      "card_end_date": "2023-06-07T19:21:00Z",
+      "card_last_use": "2022-12-07T19:21:00Z",
+      "card_amount": 200,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 34,
+    "fields": {
+      "card_series": 123,
+      "card_number": 1,
+      "card_create_date": "2022-12-08T19:23:00Z",
+      "card_end_date": "2023-06-08T19:23:00Z",
+      "card_last_use": "2022-12-08T19:23:00Z",
+      "card_amount": 300,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 35,
+    "fields": {
+      "card_series": 123,
+      "card_number": 2,
+      "card_create_date": "2022-12-08T19:23:00Z",
+      "card_end_date": "2023-06-08T19:23:00Z",
+      "card_last_use": "2022-12-08T19:23:00Z",
+      "card_amount": 300,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 36,
+    "fields": {
+      "card_series": 123,
+      "card_number": 3,
+      "card_create_date": "2022-12-08T19:23:00Z",
+      "card_end_date": "2023-06-08T19:23:00Z",
+      "card_last_use": "2022-12-08T19:23:00Z",
+      "card_amount": 300,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 37,
+    "fields": {
+      "card_series": 214,
+      "card_number": 1,
+      "card_create_date": "2022-12-07T19:25:00Z",
+      "card_end_date": "2023-06-07T19:25:00Z",
+      "card_last_use": "2022-12-07T19:25:00Z",
+      "card_amount": 200,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 38,
+    "fields": {
+      "card_series": 214,
+      "card_number": 2,
+      "card_create_date": "2022-12-07T19:25:00Z",
+      "card_end_date": "2023-06-07T19:25:00Z",
+      "card_last_use": "2022-12-07T19:25:00Z",
+      "card_amount": 200,
+      "card_status": 1
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 39,
+    "fields": {
+      "card_series": 214,
+      "card_number": 3,
+      "card_create_date": "2022-12-07T19:25:00Z",
+      "card_end_date": "2023-06-07T19:25:00Z",
+      "card_last_use": "2022-12-07T19:25:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 40,
+    "fields": {
+      "card_series": 213,
+      "card_number": 1,
+      "card_create_date": "2022-12-07T19:26:00Z",
+      "card_end_date": "2023-06-07T19:26:00Z",
+      "card_last_use": "2022-12-07T19:26:00Z",
+      "card_amount": 100,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 41,
+    "fields": {
+      "card_series": 213,
+      "card_number": 2,
+      "card_create_date": "2022-12-07T19:26:00Z",
+      "card_end_date": "2023-06-07T19:26:00Z",
+      "card_last_use": "2022-12-07T19:26:00Z",
+      "card_amount": 100,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 42,
+    "fields": {
+      "card_series": 213,
+      "card_number": 3,
+      "card_create_date": "2022-12-07T19:26:00Z",
+      "card_end_date": "2023-06-07T19:26:00Z",
+      "card_last_use": "2022-12-07T19:26:00Z",
+      "card_amount": 100,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 43,
+    "fields": {
+      "card_series": 2133,
+      "card_number": 1,
+      "card_create_date": "2022-12-07T19:27:00Z",
+      "card_end_date": "2023-06-07T19:27:00Z",
+      "card_last_use": "2022-12-07T19:27:00Z",
+      "card_amount": 10,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 44,
+    "fields": {
+      "card_series": 2133,
+      "card_number": 2,
+      "card_create_date": "2022-12-07T19:27:00Z",
+      "card_end_date": "2023-06-07T19:27:00Z",
+      "card_last_use": "2022-12-07T19:27:00Z",
+      "card_amount": 10,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 45,
+    "fields": {
+      "card_series": 21332,
+      "card_number": 1,
+      "card_create_date": "2022-12-09T19:28:00Z",
+      "card_end_date": "2023-06-09T19:28:00Z",
+      "card_last_use": "2022-12-09T19:28:00Z",
+      "card_amount": 10,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 46,
+    "fields": {
+      "card_series": 21332,
+      "card_number": 2,
+      "card_create_date": "2022-12-09T19:28:00Z",
+      "card_end_date": "2023-06-09T19:28:00Z",
+      "card_last_use": "2022-12-09T19:28:00Z",
+      "card_amount": 10,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 47,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 1,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 48,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 2,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 49,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 3,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 50,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 4,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 51,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 5,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 52,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 6,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 53,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 7,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 54,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 8,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 55,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 9,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 56,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 10,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 57,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 11,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 58,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 12,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 59,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 13,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 60,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 14,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 61,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 15,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 62,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 16,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 63,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 17,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 64,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 18,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 65,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 19,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 66,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 20,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 67,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 21,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 68,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 22,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 69,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 23,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 70,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 24,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 71,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 25,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 72,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 26,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 73,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 27,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 74,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 28,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 75,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 29,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 76,
+    "fields": {
+      "card_series": 98526,
+      "card_number": 30,
+      "card_create_date": "2022-09-01T19:39:00Z",
+      "card_end_date": "2022-10-01T19:39:00Z",
+      "card_last_use": "2022-09-01T19:39:00Z",
+      "card_amount": 5000,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 77,
+    "fields": {
+      "card_series": 987,
+      "card_number": 1,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 78,
+    "fields": {
+      "card_series": 987,
+      "card_number": 2,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 79,
+    "fields": {
+      "card_series": 987,
+      "card_number": 3,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 80,
+    "fields": {
+      "card_series": 987,
+      "card_number": 4,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 81,
+    "fields": {
+      "card_series": 987,
+      "card_number": 5,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 82,
+    "fields": {
+      "card_series": 987,
+      "card_number": 6,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 83,
+    "fields": {
+      "card_series": 987,
+      "card_number": 7,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 84,
+    "fields": {
+      "card_series": 987,
+      "card_number": 8,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 85,
+    "fields": {
+      "card_series": 987,
+      "card_number": 9,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 86,
+    "fields": {
+      "card_series": 987,
+      "card_number": 10,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 87,
+    "fields": {
+      "card_series": 987,
+      "card_number": 11,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 88,
+    "fields": {
+      "card_series": 987,
+      "card_number": 12,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 89,
+    "fields": {
+      "card_series": 987,
+      "card_number": 13,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 90,
+    "fields": {
+      "card_series": 987,
+      "card_number": 14,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 91,
+    "fields": {
+      "card_series": 987,
+      "card_number": 15,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 0,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 92,
+    "fields": {
+      "card_series": 987,
+      "card_number": 16,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 300,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 93,
+    "fields": {
+      "card_series": 987,
+      "card_number": 17,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 300,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 94,
+    "fields": {
+      "card_series": 987,
+      "card_number": 18,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 300,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 95,
+    "fields": {
+      "card_series": 987,
+      "card_number": 19,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 300,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardbasetable",
+    "pk": 96,
+    "fields": {
+      "card_series": 987,
+      "card_number": 20,
+      "card_create_date": "2022-12-11T20:06:00Z",
+      "card_end_date": "2023-06-11T20:06:00Z",
+      "card_last_use": "2022-12-11T20:06:00Z",
+      "card_amount": 300,
+      "card_status": 2
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 39,
+    "fields": {
+      "card_id": 25,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 40,
+    "fields": {
+      "card_id": 25,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 18:31:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 41,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 42,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 18:31:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 43,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 44,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:20:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 45,
+    "fields": {
+      "card_id": 28,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 46,
+    "fields": {
+      "card_id": 28,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:20:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 47,
+    "fields": {
+      "card_id": 29,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 48,
+    "fields": {
+      "card_id": 29,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:21:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 49,
+    "fields": {
+      "card_id": 30,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 50,
+    "fields": {
+      "card_id": 30,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:21:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 51,
+    "fields": {
+      "card_id": 31,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 52,
+    "fields": {
+      "card_id": 31,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:21:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 53,
+    "fields": {
+      "card_id": 32,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 54,
+    "fields": {
+      "card_id": 32,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:21:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 55,
+    "fields": {
+      "card_id": 33,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 56,
+    "fields": {
+      "card_id": 33,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:21:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 57,
+    "fields": {
+      "card_id": 34,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 58,
+    "fields": {
+      "card_id": 34,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-08 19:23:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 59,
+    "fields": {
+      "card_id": 35,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 60,
+    "fields": {
+      "card_id": 35,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-08 19:23:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 61,
+    "fields": {
+      "card_id": 36,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 62,
+    "fields": {
+      "card_id": 36,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-08 19:23:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 63,
+    "fields": {
+      "card_id": 37,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 64,
+    "fields": {
+      "card_id": 37,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:25:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 65,
+    "fields": {
+      "card_id": 38,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 66,
+    "fields": {
+      "card_id": 38,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:25:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 67,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 68,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:25:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 69,
+    "fields": {
+      "card_id": 40,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 70,
+    "fields": {
+      "card_id": 40,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:26:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 71,
+    "fields": {
+      "card_id": 41,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 72,
+    "fields": {
+      "card_id": 41,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:26:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 73,
+    "fields": {
+      "card_id": 42,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 74,
+    "fields": {
+      "card_id": 42,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:26:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 75,
+    "fields": {
+      "card_id": 43,
+      "card_operation": 1,
+      "card_operation_detail": "10"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 76,
+    "fields": {
+      "card_id": 43,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:27:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 77,
+    "fields": {
+      "card_id": 44,
+      "card_operation": 1,
+      "card_operation_detail": "10"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 78,
+    "fields": {
+      "card_id": 44,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-07 19:27:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 79,
+    "fields": {
+      "card_id": 45,
+      "card_operation": 1,
+      "card_operation_detail": "10"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 80,
+    "fields": {
+      "card_id": 46,
+      "card_operation": 1,
+      "card_operation_detail": "10"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 81,
+    "fields": {
+      "card_id": 47,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 82,
+    "fields": {
+      "card_id": 47,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 83,
+    "fields": {
+      "card_id": 48,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 84,
+    "fields": {
+      "card_id": 48,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 85,
+    "fields": {
+      "card_id": 49,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 86,
+    "fields": {
+      "card_id": 49,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 87,
+    "fields": {
+      "card_id": 50,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 88,
+    "fields": {
+      "card_id": 50,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 89,
+    "fields": {
+      "card_id": 51,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 90,
+    "fields": {
+      "card_id": 51,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 91,
+    "fields": {
+      "card_id": 52,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 92,
+    "fields": {
+      "card_id": 52,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 93,
+    "fields": {
+      "card_id": 53,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 94,
+    "fields": {
+      "card_id": 53,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 95,
+    "fields": {
+      "card_id": 54,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 96,
+    "fields": {
+      "card_id": 54,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 97,
+    "fields": {
+      "card_id": 55,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 98,
+    "fields": {
+      "card_id": 55,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 99,
+    "fields": {
+      "card_id": 56,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 100,
+    "fields": {
+      "card_id": 56,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 101,
+    "fields": {
+      "card_id": 57,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 102,
+    "fields": {
+      "card_id": 57,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 103,
+    "fields": {
+      "card_id": 58,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 104,
+    "fields": {
+      "card_id": 58,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 105,
+    "fields": {
+      "card_id": 59,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 106,
+    "fields": {
+      "card_id": 59,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 107,
+    "fields": {
+      "card_id": 60,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 108,
+    "fields": {
+      "card_id": 60,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 109,
+    "fields": {
+      "card_id": 61,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 110,
+    "fields": {
+      "card_id": 61,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 111,
+    "fields": {
+      "card_id": 62,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 112,
+    "fields": {
+      "card_id": 62,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 113,
+    "fields": {
+      "card_id": 63,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 114,
+    "fields": {
+      "card_id": 63,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 115,
+    "fields": {
+      "card_id": 64,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 116,
+    "fields": {
+      "card_id": 64,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 117,
+    "fields": {
+      "card_id": 65,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 118,
+    "fields": {
+      "card_id": 65,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 119,
+    "fields": {
+      "card_id": 66,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 120,
+    "fields": {
+      "card_id": 66,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 121,
+    "fields": {
+      "card_id": 67,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 122,
+    "fields": {
+      "card_id": 67,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 123,
+    "fields": {
+      "card_id": 68,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 124,
+    "fields": {
+      "card_id": 68,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 125,
+    "fields": {
+      "card_id": 69,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 126,
+    "fields": {
+      "card_id": 69,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 127,
+    "fields": {
+      "card_id": 70,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 128,
+    "fields": {
+      "card_id": 70,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 129,
+    "fields": {
+      "card_id": 71,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 130,
+    "fields": {
+      "card_id": 71,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 131,
+    "fields": {
+      "card_id": 72,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 132,
+    "fields": {
+      "card_id": 72,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 133,
+    "fields": {
+      "card_id": 73,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 134,
+    "fields": {
+      "card_id": 73,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 135,
+    "fields": {
+      "card_id": 74,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 136,
+    "fields": {
+      "card_id": 74,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 137,
+    "fields": {
+      "card_id": 75,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 138,
+    "fields": {
+      "card_id": 75,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 139,
+    "fields": {
+      "card_id": 76,
+      "card_operation": 1,
+      "card_operation_detail": "5000"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 140,
+    "fields": {
+      "card_id": 76,
+      "card_operation": 3,
+      "card_operation_detail": "2022-09-01 19:39:00"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 141,
+    "fields": {
+      "card_id": 25,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-09 21:47:06.547359"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 142,
+    "fields": {
+      "card_id": 47,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.919532"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 143,
+    "fields": {
+      "card_id": 48,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.930761"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 144,
+    "fields": {
+      "card_id": 49,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.939029"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 145,
+    "fields": {
+      "card_id": 50,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.946030"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 146,
+    "fields": {
+      "card_id": 51,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.953548"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 147,
+    "fields": {
+      "card_id": 52,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.961304"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 148,
+    "fields": {
+      "card_id": 53,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.969303"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 149,
+    "fields": {
+      "card_id": 54,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.977304"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 150,
+    "fields": {
+      "card_id": 55,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.984831"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 151,
+    "fields": {
+      "card_id": 56,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:19.992948"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 152,
+    "fields": {
+      "card_id": 57,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.000836"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 153,
+    "fields": {
+      "card_id": 58,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.008267"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 154,
+    "fields": {
+      "card_id": 59,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.016267"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 155,
+    "fields": {
+      "card_id": 60,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.023160"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 156,
+    "fields": {
+      "card_id": 61,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.031836"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 157,
+    "fields": {
+      "card_id": 62,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.038726"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 158,
+    "fields": {
+      "card_id": 63,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.049244"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 159,
+    "fields": {
+      "card_id": 64,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.056247"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 160,
+    "fields": {
+      "card_id": 65,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.064510"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 161,
+    "fields": {
+      "card_id": 66,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.073510"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 162,
+    "fields": {
+      "card_id": 67,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.081571"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 163,
+    "fields": {
+      "card_id": 68,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.089375"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 164,
+    "fields": {
+      "card_id": 69,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.097375"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 165,
+    "fields": {
+      "card_id": 70,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.104376"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 166,
+    "fields": {
+      "card_id": 71,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.113024"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 167,
+    "fields": {
+      "card_id": 72,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.121737"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 168,
+    "fields": {
+      "card_id": 73,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.129626"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 169,
+    "fields": {
+      "card_id": 74,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.137194"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 170,
+    "fields": {
+      "card_id": 75,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.146065"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 171,
+    "fields": {
+      "card_id": 76,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:05:20.153758"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 172,
+    "fields": {
+      "card_id": 40,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:19:52.802181"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 173,
+    "fields": {
+      "card_id": 33,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:20:12.535522"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 174,
+    "fields": {
+      "card_id": 31,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:20:32.286705"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 175,
+    "fields": {
+      "card_id": 32,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:20:32.303012"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 176,
+    "fields": {
+      "card_id": 33,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:20:32.317667"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 177,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:21:01.406718"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 178,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:21:01.421671"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 179,
+    "fields": {
+      "card_id": 28,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:21:01.432586"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 180,
+    "fields": {
+      "card_id": 29,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:21:01.453730"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 181,
+    "fields": {
+      "card_id": 30,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:21:01.468844"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 182,
+    "fields": {
+      "card_id": 25,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:22:51.285554"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 183,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:22:51.311673"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 184,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:22:51.320540"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 185,
+    "fields": {
+      "card_id": 25,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:23:29.217821"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 186,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:23:30.672711"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 187,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:23:31.852736"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 188,
+    "fields": {
+      "card_id": 70,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.709758"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 189,
+    "fields": {
+      "card_id": 71,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.725950"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 190,
+    "fields": {
+      "card_id": 72,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.734666"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 191,
+    "fields": {
+      "card_id": 73,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.766294"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 192,
+    "fields": {
+      "card_id": 74,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.775284"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 193,
+    "fields": {
+      "card_id": 74,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.736667"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 194,
+    "fields": {
+      "card_id": 75,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.790283"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 195,
+    "fields": {
+      "card_id": 75,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.799535"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 196,
+    "fields": {
+      "card_id": 76,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.808475"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 197,
+    "fields": {
+      "card_id": 76,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:16.800536"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 198,
+    "fields": {
+      "card_id": 68,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:48.562924"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 199,
+    "fields": {
+      "card_id": 69,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:48.581698"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 200,
+    "fields": {
+      "card_id": 67,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:48.569923"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 201,
+    "fields": {
+      "card_id": 68,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:48.612191"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 202,
+    "fields": {
+      "card_id": 69,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:25:48.621190"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 203,
+    "fields": {
+      "card_id": 64,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:26:03.929427"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 204,
+    "fields": {
+      "card_id": 65,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:26:03.959410"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 205,
+    "fields": {
+      "card_id": 66,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:26:03.971410"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 206,
+    "fields": {
+      "card_id": 62,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:30:15.830197"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 207,
+    "fields": {
+      "card_id": 63,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:30:15.846720"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 208,
+    "fields": {
+      "card_id": 61,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:30:45.612882"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 209,
+    "fields": {
+      "card_id": 60,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:31:29.449963"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 210,
+    "fields": {
+      "card_id": 59,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:31:51.876207"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 211,
+    "fields": {
+      "card_id": 58,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:32:04.301859"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 212,
+    "fields": {
+      "card_id": 57,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:32:15.651696"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 213,
+    "fields": {
+      "card_id": 56,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:32:19.891340"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 214,
+    "fields": {
+      "card_id": 55,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:32:32.059922"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 215,
+    "fields": {
+      "card_id": 53,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:32:35.900056"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 216,
+    "fields": {
+      "card_id": 54,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:32:35.918087"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 217,
+    "fields": {
+      "card_id": 25,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:32:50.013350"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 218,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:32:50.034048"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 219,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:32:50.056198"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 220,
+    "fields": {
+      "card_id": 34,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:32:50.066275"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 221,
+    "fields": {
+      "card_id": 35,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:32:50.091850"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 222,
+    "fields": {
+      "card_id": 36,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.671541"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 223,
+    "fields": {
+      "card_id": 37,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.692222"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 224,
+    "fields": {
+      "card_id": 38,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.702620"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 225,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.714174"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 226,
+    "fields": {
+      "card_id": 41,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.734281"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 227,
+    "fields": {
+      "card_id": 42,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.749851"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 228,
+    "fields": {
+      "card_id": 43,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.765617"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 229,
+    "fields": {
+      "card_id": 44,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.778168"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 230,
+    "fields": {
+      "card_id": 45,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.807058"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 231,
+    "fields": {
+      "card_id": 46,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.832254"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 232,
+    "fields": {
+      "card_id": 53,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.840750"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 233,
+    "fields": {
+      "card_id": 54,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.850647"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 234,
+    "fields": {
+      "card_id": 55,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.875814"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 235,
+    "fields": {
+      "card_id": 56,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.891036"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 236,
+    "fields": {
+      "card_id": 57,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:09.903554"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 237,
+    "fields": {
+      "card_id": 58,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.207031"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 238,
+    "fields": {
+      "card_id": 59,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.224832"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 239,
+    "fields": {
+      "card_id": 60,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.233717"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 240,
+    "fields": {
+      "card_id": 61,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.241918"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 241,
+    "fields": {
+      "card_id": 62,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.249919"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 242,
+    "fields": {
+      "card_id": 63,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.257649"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 243,
+    "fields": {
+      "card_id": 64,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.265079"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 244,
+    "fields": {
+      "card_id": 65,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.273079"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 245,
+    "fields": {
+      "card_id": 66,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.280766"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 246,
+    "fields": {
+      "card_id": 67,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.288769"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 247,
+    "fields": {
+      "card_id": 68,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.296606"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 248,
+    "fields": {
+      "card_id": 69,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.304230"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 249,
+    "fields": {
+      "card_id": 70,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.312145"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 250,
+    "fields": {
+      "card_id": 71,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.319264"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 251,
+    "fields": {
+      "card_id": 72,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.327694"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 252,
+    "fields": {
+      "card_id": 73,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.335693"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 253,
+    "fields": {
+      "card_id": 74,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.345461"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 254,
+    "fields": {
+      "card_id": 75,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.354470"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 255,
+    "fields": {
+      "card_id": 76,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 00:33:27.362794"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 256,
+    "fields": {
+      "card_id": 25,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.204098"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 257,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.220091"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 258,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.240428"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 259,
+    "fields": {
+      "card_id": 28,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.249426"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 260,
+    "fields": {
+      "card_id": 29,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.258427"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 261,
+    "fields": {
+      "card_id": 30,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.269113"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 262,
+    "fields": {
+      "card_id": 31,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.278120"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 263,
+    "fields": {
+      "card_id": 32,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.287254"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 264,
+    "fields": {
+      "card_id": 33,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.307346"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 265,
+    "fields": {
+      "card_id": 34,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.324075"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 266,
+    "fields": {
+      "card_id": 35,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.338080"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 267,
+    "fields": {
+      "card_id": 36,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.351852"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 268,
+    "fields": {
+      "card_id": 37,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.362330"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 269,
+    "fields": {
+      "card_id": 38,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.371839"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 270,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 00:33:44.382834"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 271,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 10:09:15.553571"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 272,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 10:09:17.199469"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 273,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 274,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 275,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "111"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 276,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "11122"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 277,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 2,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 278,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 2,
+      "card_operation_detail": "711"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 279,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 280,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "500"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 281,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 2,
+      "card_operation_detail": "500"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 282,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 2,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 283,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 284,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 2,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 285,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 286,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 2,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 287,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 10:29:30.697450"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 288,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 10:29:31.508188"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 289,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 290,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 2,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 291,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 10:31:15.522715"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 292,
+    "fields": {
+      "card_id": 39,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 10:31:15.528714"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 293,
+    "fields": {
+      "card_id": 77,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 294,
+    "fields": {
+      "card_id": 78,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 295,
+    "fields": {
+      "card_id": 79,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 296,
+    "fields": {
+      "card_id": 80,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 297,
+    "fields": {
+      "card_id": 81,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 298,
+    "fields": {
+      "card_id": 82,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 299,
+    "fields": {
+      "card_id": 83,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 300,
+    "fields": {
+      "card_id": 84,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 301,
+    "fields": {
+      "card_id": 85,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 302,
+    "fields": {
+      "card_id": 86,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 303,
+    "fields": {
+      "card_id": 87,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 304,
+    "fields": {
+      "card_id": 88,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 305,
+    "fields": {
+      "card_id": 89,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 306,
+    "fields": {
+      "card_id": 90,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 307,
+    "fields": {
+      "card_id": 91,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 308,
+    "fields": {
+      "card_id": 92,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 309,
+    "fields": {
+      "card_id": 93,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 310,
+    "fields": {
+      "card_id": 94,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 311,
+    "fields": {
+      "card_id": 95,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 312,
+    "fields": {
+      "card_id": 96,
+      "card_operation": 1,
+      "card_operation_detail": "300"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 313,
+    "fields": {
+      "card_id": 77,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.443725"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 314,
+    "fields": {
+      "card_id": 78,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.464653"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 315,
+    "fields": {
+      "card_id": 79,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.490489"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 316,
+    "fields": {
+      "card_id": 80,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.505486"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 317,
+    "fields": {
+      "card_id": 81,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.521433"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 318,
+    "fields": {
+      "card_id": 82,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.530433"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 319,
+    "fields": {
+      "card_id": 83,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.538433"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 320,
+    "fields": {
+      "card_id": 84,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.547215"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 321,
+    "fields": {
+      "card_id": 85,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.556128"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 322,
+    "fields": {
+      "card_id": 86,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.566819"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 323,
+    "fields": {
+      "card_id": 87,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.578216"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 324,
+    "fields": {
+      "card_id": 88,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.599572"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 325,
+    "fields": {
+      "card_id": 89,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.614124"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 326,
+    "fields": {
+      "card_id": 90,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.630807"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 327,
+    "fields": {
+      "card_id": 91,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:09:06.643723"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 328,
+    "fields": {
+      "card_id": 77,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 329,
+    "fields": {
+      "card_id": 78,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 330,
+    "fields": {
+      "card_id": 79,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 331,
+    "fields": {
+      "card_id": 80,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 332,
+    "fields": {
+      "card_id": 81,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 333,
+    "fields": {
+      "card_id": 82,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 334,
+    "fields": {
+      "card_id": 83,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 335,
+    "fields": {
+      "card_id": 84,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 336,
+    "fields": {
+      "card_id": 85,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 337,
+    "fields": {
+      "card_id": 86,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 338,
+    "fields": {
+      "card_id": 87,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 339,
+    "fields": {
+      "card_id": 88,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 340,
+    "fields": {
+      "card_id": 89,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 341,
+    "fields": {
+      "card_id": 90,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 342,
+    "fields": {
+      "card_id": 91,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 343,
+    "fields": {
+      "card_id": 77,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 344,
+    "fields": {
+      "card_id": 77,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.158760"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 345,
+    "fields": {
+      "card_id": 77,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.166757"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 346,
+    "fields": {
+      "card_id": 78,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 347,
+    "fields": {
+      "card_id": 78,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.199720"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 348,
+    "fields": {
+      "card_id": 78,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.204721"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 349,
+    "fields": {
+      "card_id": 79,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 350,
+    "fields": {
+      "card_id": 79,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.229295"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 351,
+    "fields": {
+      "card_id": 79,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.248550"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 352,
+    "fields": {
+      "card_id": 80,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 353,
+    "fields": {
+      "card_id": 80,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.296669"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 354,
+    "fields": {
+      "card_id": 80,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.307669"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 355,
+    "fields": {
+      "card_id": 81,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 356,
+    "fields": {
+      "card_id": 81,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.331695"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 357,
+    "fields": {
+      "card_id": 81,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.338695"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 358,
+    "fields": {
+      "card_id": 82,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 359,
+    "fields": {
+      "card_id": 82,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.360721"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 360,
+    "fields": {
+      "card_id": 82,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.366722"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 361,
+    "fields": {
+      "card_id": 83,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 362,
+    "fields": {
+      "card_id": 83,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.386745"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 363,
+    "fields": {
+      "card_id": 83,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.392259"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 364,
+    "fields": {
+      "card_id": 84,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 365,
+    "fields": {
+      "card_id": 84,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.412777"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 366,
+    "fields": {
+      "card_id": 84,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.418287"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 367,
+    "fields": {
+      "card_id": 85,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 368,
+    "fields": {
+      "card_id": 85,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.440345"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 369,
+    "fields": {
+      "card_id": 85,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.446946"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 370,
+    "fields": {
+      "card_id": 86,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 371,
+    "fields": {
+      "card_id": 86,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.468535"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 372,
+    "fields": {
+      "card_id": 86,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.474537"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 373,
+    "fields": {
+      "card_id": 87,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 374,
+    "fields": {
+      "card_id": 87,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.495886"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 375,
+    "fields": {
+      "card_id": 87,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.501729"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 376,
+    "fields": {
+      "card_id": 88,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 377,
+    "fields": {
+      "card_id": 88,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.520671"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 378,
+    "fields": {
+      "card_id": 88,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.525797"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 379,
+    "fields": {
+      "card_id": 89,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 380,
+    "fields": {
+      "card_id": 89,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.545506"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 381,
+    "fields": {
+      "card_id": 89,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.550880"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 382,
+    "fields": {
+      "card_id": 90,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 383,
+    "fields": {
+      "card_id": 90,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.569397"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 384,
+    "fields": {
+      "card_id": 90,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.575398"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 385,
+    "fields": {
+      "card_id": 91,
+      "card_operation": 2,
+      "card_operation_detail": "400"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 386,
+    "fields": {
+      "card_id": 91,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:09:29.594659"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 387,
+    "fields": {
+      "card_id": 91,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:09:29.599660"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 388,
+    "fields": {
+      "card_id": 25,
+      "card_operation": 1,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 389,
+    "fields": {
+      "card_id": 25,
+      "card_operation": 2,
+      "card_operation_detail": "10"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 390,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 2,
+      "card_operation_detail": "100"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 391,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 2,
+      "card_operation_detail": "200"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 392,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 5,
+      "card_operation_detail": "2022-12-10 20:26:14.479050"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 393,
+    "fields": {
+      "card_id": 27,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:26:14.486086"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 394,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 4,
+      "card_operation_detail": "2022-12-10 20:26:26.631220"
+    }
+  },
+  {
+    "model": "cardmanagement.cardhistoryuse",
+    "pk": 395,
+    "fields": {
+      "card_id": 26,
+      "card_operation": 3,
+      "card_operation_detail": "2022-12-10 20:26:31.524193"
+    }
+  }
+]

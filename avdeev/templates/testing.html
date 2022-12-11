@@ -8,9 +8,8 @@
 </head>
 <body>
 {% csrf_token %}
-
 <form class="question__form">
-    <div class="test_id" testID="{{testID}}"><h1>Тест №:{{testID}}</h1></div>
+    <div class="test_id" testID="{{testID}}"><h1>{{testName}}</h1></div>
     <div class="question__block">
         <div class="question wrapper">
             <div class="number" style="float: left; display: block">{{number}}</div>
@@ -31,6 +30,6 @@
 <script>
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 </script>
-<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/testing_script.js' %}"></script>
 </body>
 </html>

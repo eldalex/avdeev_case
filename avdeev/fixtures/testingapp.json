@@ -1,0 +1,593 @@
+[
+  {
+    "model": "testingapp.tests",
+    "pk": 12,
+    "fields": {
+      "test_name": "Тест №1, Цвета",
+      "test_parent": null
+    }
+  },
+  {
+    "model": "testingapp.tests",
+    "pk": 13,
+    "fields": {
+      "test_name": "Тест № 2, Животные",
+      "test_parent": 12
+    }
+  },
+  {
+    "model": "testingapp.tests",
+    "pk": 14,
+    "fields": {
+      "test_name": "Тест № 3.",
+      "test_parent": 13
+    }
+  },
+  {
+    "model": "testingapp.tests",
+    "pk": 15,
+    "fields": {
+      "test_name": "Тест № 4.",
+      "test_parent": null
+    }
+  },
+  {
+    "model": "testingapp.testresults",
+    "pk": 7,
+    "fields": {
+      "test_id": 12,
+      "user_id": 9,
+      "test_is_pass": true,
+      "true_answer": 5,
+      "wrong_answer": 2
+    }
+  },
+  {
+    "model": "testingapp.testresults",
+    "pk": 8,
+    "fields": {
+      "test_id": 13,
+      "user_id": 9,
+      "test_is_pass": true,
+      "true_answer": 6,
+      "wrong_answer": 0
+    }
+  },
+  {
+    "model": "testingapp.testresults",
+    "pk": 9,
+    "fields": {
+      "test_id": 14,
+      "user_id": 9,
+      "test_is_pass": true,
+      "true_answer": 1,
+      "wrong_answer": 2
+    }
+  },
+  {
+    "model": "testingapp.testresults",
+    "pk": 10,
+    "fields": {
+      "test_id": 15,
+      "user_id": 9,
+      "test_is_pass": true,
+      "true_answer": 2,
+      "wrong_answer": 0
+    }
+  },
+  {
+    "model": "testingapp.testresults",
+    "pk": 11,
+    "fields": {
+      "test_id": 12,
+      "user_id": 10,
+      "test_is_pass": true,
+      "true_answer": 2,
+      "wrong_answer": 5
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 15,
+    "fields": {
+      "question_id": 1,
+      "test_id": 12,
+      "question_text": "Какого цвета \"Красный\" цвет?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 16,
+    "fields": {
+      "question_id": 2,
+      "test_id": 12,
+      "question_text": "Какого цвета \"Оранжевый\" цвет?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 17,
+    "fields": {
+      "question_id": 3,
+      "test_id": 12,
+      "question_text": "Какого цвета \"Желтый\" цвет?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 18,
+    "fields": {
+      "question_id": 4,
+      "test_id": 12,
+      "question_text": "Какого цвета \"Зелёный\" цвет?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 19,
+    "fields": {
+      "question_id": 5,
+      "test_id": 12,
+      "question_text": "Какого цвета \"Голубой\" цвет?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 20,
+    "fields": {
+      "question_id": 6,
+      "test_id": 12,
+      "question_text": "Какие цвета можно смешать для получения \"Синего\" цвета"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 21,
+    "fields": {
+      "question_id": 7,
+      "test_id": 12,
+      "question_text": "Какого цвета \"Фиолетовый\" цвет?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 22,
+    "fields": {
+      "question_id": 1,
+      "test_id": 13,
+      "question_text": "Какое самое быстрое животное?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 23,
+    "fields": {
+      "question_id": 2,
+      "test_id": 13,
+      "question_text": "Кугуар и пума это одно и то же животное?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 24,
+    "fields": {
+      "question_id": 3,
+      "test_id": 13,
+      "question_text": "Черепахи сухопутные или водоплавоющие животные?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 25,
+    "fields": {
+      "question_id": 4,
+      "test_id": 13,
+      "question_text": "Бывают ли коты черепахового окраса?"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 26,
+    "fields": {
+      "question_id": 5,
+      "test_id": 13,
+      "question_text": "Самая крупная порода котов"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 27,
+    "fields": {
+      "question_id": 6,
+      "test_id": 13,
+      "question_text": "Самая крупная порода собак"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 28,
+    "fields": {
+      "question_id": 1,
+      "test_id": 14,
+      "question_text": "Вопрос 1"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 29,
+    "fields": {
+      "question_id": 2,
+      "test_id": 14,
+      "question_text": "Вопрос 2"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 30,
+    "fields": {
+      "question_id": 3,
+      "test_id": 14,
+      "question_text": "Вопрос 3"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 31,
+    "fields": {
+      "question_id": 1,
+      "test_id": 15,
+      "question_text": "Вопрос 1"
+    }
+  },
+  {
+    "model": "testingapp.testquestion",
+    "pk": 32,
+    "fields": {
+      "question_id": 2,
+      "test_id": 15,
+      "question_text": "Вопрос 2"
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 15,
+    "fields": {
+      "question_id": 15,
+      "answer_1_text": "Красный",
+      "true_answer_1": true,
+      "answer_2_text": "Синий",
+      "true_answer_2": false,
+      "answer_3_text": "Фиолетовый",
+      "true_answer_3": false,
+      "answer_4_text": "Зелёный",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 16,
+    "fields": {
+      "question_id": 16,
+      "answer_1_text": "Серый",
+      "true_answer_1": false,
+      "answer_2_text": "Синий",
+      "true_answer_2": false,
+      "answer_3_text": "Оранжевый",
+      "true_answer_3": true,
+      "answer_4_text": "Зелёный",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 17,
+    "fields": {
+      "question_id": 17,
+      "answer_1_text": "Малиновый",
+      "true_answer_1": false,
+      "answer_2_text": "Серебрянный",
+      "true_answer_2": false,
+      "answer_3_text": "Золотой",
+      "true_answer_3": false,
+      "answer_4_text": "Желтый",
+      "true_answer_4": true,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 18,
+    "fields": {
+      "question_id": 18,
+      "answer_1_text": "Зелёный",
+      "true_answer_1": true,
+      "answer_2_text": "Бурый",
+      "true_answer_2": false,
+      "answer_3_text": "Коричневый",
+      "true_answer_3": false,
+      "answer_4_text": "Лиловый",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 19,
+    "fields": {
+      "question_id": 19,
+      "answer_1_text": "Зелёный",
+      "true_answer_1": false,
+      "answer_2_text": "Фиолетовый",
+      "true_answer_2": false,
+      "answer_3_text": "Красный",
+      "true_answer_3": false,
+      "answer_4_text": "Бордовый",
+      "true_answer_4": false,
+      "answer_5_text": "Нет ответа",
+      "true_answer_5": true,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 20,
+    "fields": {
+      "question_id": 20,
+      "answer_1_text": "Фиолетовый",
+      "true_answer_1": true,
+      "answer_2_text": "Голубой",
+      "true_answer_2": true,
+      "answer_3_text": "Желтый",
+      "true_answer_3": false,
+      "answer_4_text": "Пурпурный",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 21,
+    "fields": {
+      "question_id": 21,
+      "answer_1_text": "Фиолетовый",
+      "true_answer_1": true,
+      "answer_2_text": "Пурпурный",
+      "true_answer_2": false,
+      "answer_3_text": "Красный",
+      "true_answer_3": false,
+      "answer_4_text": "Бирюзовый",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 22,
+    "fields": {
+      "question_id": 22,
+      "answer_1_text": "Гепард",
+      "true_answer_1": true,
+      "answer_2_text": "Заяц",
+      "true_answer_2": false,
+      "answer_3_text": "Корова",
+      "true_answer_3": false,
+      "answer_4_text": "Пума",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 23,
+    "fields": {
+      "question_id": 23,
+      "answer_1_text": "Да",
+      "true_answer_1": true,
+      "answer_2_text": "Нет",
+      "true_answer_2": false,
+      "answer_3_text": "Наверное",
+      "true_answer_3": false,
+      "answer_4_text": null,
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 24,
+    "fields": {
+      "question_id": 24,
+      "answer_1_text": "Однозначно сухопутные",
+      "true_answer_1": false,
+      "answer_2_text": "Только водоплавоющие",
+      "true_answer_2": false,
+      "answer_3_text": "Оба ответа верны",
+      "true_answer_3": true,
+      "answer_4_text": "Оба ответа НЕ верны",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 25,
+    "fields": {
+      "question_id": 25,
+      "answer_1_text": "Нет, только кошки",
+      "true_answer_1": false,
+      "answer_2_text": "Черепахи это другое животное!",
+      "true_answer_2": false,
+      "answer_3_text": "Да, но все бесплодные.",
+      "true_answer_3": true,
+      "answer_4_text": "Я люблю только собак.",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 26,
+    "fields": {
+      "question_id": 26,
+      "answer_1_text": "Курильский бобтейл",
+      "true_answer_1": false,
+      "answer_2_text": "Мейн Кун",
+      "true_answer_2": true,
+      "answer_3_text": "Корниш рекс",
+      "true_answer_3": false,
+      "answer_4_text": "Манул",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 27,
+    "fields": {
+      "question_id": 27,
+      "answer_1_text": "Сенбернар",
+      "true_answer_1": false,
+      "answer_2_text": "Шпиц",
+      "true_answer_2": false,
+      "answer_3_text": "Английский мастиф",
+      "true_answer_3": true,
+      "answer_4_text": "эээ... мейн кун?",
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 28,
+    "fields": {
+      "question_id": 28,
+      "answer_1_text": "Ответ 1",
+      "true_answer_1": true,
+      "answer_2_text": "Ответ2",
+      "true_answer_2": false,
+      "answer_3_text": null,
+      "true_answer_3": false,
+      "answer_4_text": null,
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 29,
+    "fields": {
+      "question_id": 29,
+      "answer_1_text": "Ответ 1",
+      "true_answer_1": true,
+      "answer_2_text": "Ответ 2",
+      "true_answer_2": true,
+      "answer_3_text": "Ответ 3",
+      "true_answer_3": false,
+      "answer_4_text": null,
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 30,
+    "fields": {
+      "question_id": 30,
+      "answer_1_text": "Ответ 1",
+      "true_answer_1": true,
+      "answer_2_text": "Ответ 2",
+      "true_answer_2": false,
+      "answer_3_text": "Ответ 3",
+      "true_answer_3": false,
+      "answer_4_text": null,
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 31,
+    "fields": {
+      "question_id": 31,
+      "answer_1_text": "Ответ Т4_1",
+      "true_answer_1": true,
+      "answer_2_text": "Ответ Т4_2",
+      "true_answer_2": false,
+      "answer_3_text": null,
+      "true_answer_3": false,
+      "answer_4_text": null,
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  },
+  {
+    "model": "testingapp.answers",
+    "pk": 32,
+    "fields": {
+      "question_id": 32,
+      "answer_1_text": "Ответ Т4_1",
+      "true_answer_1": true,
+      "answer_2_text": "Ответ Т4_2",
+      "true_answer_2": false,
+      "answer_3_text": null,
+      "true_answer_3": false,
+      "answer_4_text": null,
+      "true_answer_4": false,
+      "answer_5_text": null,
+      "true_answer_5": false,
+      "answer_6_text": null,
+      "true_answer_6": false
+    }
+  }
+]

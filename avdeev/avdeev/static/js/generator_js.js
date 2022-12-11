@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
             "series": formData["card-series"]
         }
         const request = new XMLHttpRequest();
-        request.open('POST', 'http://127.0.0.1:8000/cards/cardgenerator/checkseries/');
+        request.open('POST', '/cards/cardgenerator/checkseries/');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         request.setRequestHeader('X-CSRFToken', csrftoken);
         let data = JSON.stringify(series_data);
@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function generateCards(formData) {
         const requestGenerate = new XMLHttpRequest();
-        requestGenerate.open('POST', 'http://127.0.0.1:8000/cards/cardgenerator/generate/');
+        requestGenerate.open('POST', '/cards/cardgenerator/generate/');
         requestGenerate.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         requestGenerate.setRequestHeader('X-CSRFToken', csrftoken);
         let data = JSON.stringify(formData);

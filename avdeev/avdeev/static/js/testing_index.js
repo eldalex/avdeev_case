@@ -5,22 +5,18 @@ window.addEventListener('DOMContentLoaded', () => {
     let answer;
     statistics.forEach(item => {
         let testID = item.getAttribute("testID");
-
         getStatistic(testID);
-
-
     });
 
     function getStatistic(testID) {
         let nowTest = {};
         nowTest["test_id"] = testID;
         const request = new XMLHttpRequest();
-        request.open('POST', 'http://127.0.0.1:8000/test/statistics/');
+        request.open('POST', '/test/statistics/');
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         request.setRequestHeader('X-CSRFToken', csrftoken);
         let data = JSON.stringify(nowTest);
         request.send(data);
-
         request.addEventListener('load', () => {
             if (request.status === 200) {
                 answer = JSON.parse(request.response);
@@ -33,12 +29,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
                 updateStatistics(testID, answer)
             }
-        })
+        });
     }
 
     function updateStatistics(testID, answer) {
         const nowTD = document.querySelector(`td[testID="${testID}"]`)
-        console.log(answer)
         nowTD.innerHTML = `Верных ответов:${answer.true}, Ошибок:${answer.false}, Процент верных ответов${answer.true_pers}`;
     }
 

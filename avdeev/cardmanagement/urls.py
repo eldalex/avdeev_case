@@ -11,4 +11,5 @@ urlpatterns = [
     path('cardmanagement/disablechacked/', views.disable_checked_card),
     path('cardmanagement/enablechacked/', views.enable_checked_card),
     path('cardmanagement/checkexpired/<int:action>/', views.check_expired_card),
+    path('cardmanagement/accountmovement/', views.account_movement),
 ]

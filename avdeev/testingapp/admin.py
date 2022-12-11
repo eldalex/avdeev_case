@@ -38,10 +38,16 @@ class AnswerAdm(admin.StackedInline):
               'true_answer_6',)
     readonly_fields = ('question_id',)
 
+class QuestionInLine(admin.StackedInline):
+    model = Testquestion
+    fields = ('question_id','test_id','question_text')
+    extra = 0
+
 
 class TestsAdmin(admin.ModelAdmin):
     list_display = ('test_id', 'test_name');
     list_display_links = ('test_name',)
+    inlines = [QuestionInLine, ]
 
     def save(self, *args, **kwargs):
         print('TestsAdmin')
